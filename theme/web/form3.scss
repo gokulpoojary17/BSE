@@ -1,0 +1,43 @@
+@import './custom-variables';
+
+.bank-row2{
+    margin-top:40px;
+}
+.bank-row3{
+    margin-top: 40px;
+}
+.bank-row4{
+    margin-top: 40px;
+}
+
+.bank-button{
+    margin-left: 90%;
+    background: linear-gradient(to right,yellow,orange);
+}
+.bank-container{
+        margin-top: 20px;
+    margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+  
+ 
+  .accounttype-container{
+      margin-top: 40px;
+      margin-left: 20px;
+          font-size: 14px;
+          display: flex;
+          gap: 20px;
+           width: 100px;
+
+      
+  }
+  .bank-button{
+      margin-left: 20px;
+  }
+
+}
+//   .navbar {
+//     display: flex;
+//     flex-direction: column;
+//   }

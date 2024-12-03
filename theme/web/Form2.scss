@@ -1,0 +1,51 @@
+@import './custom-variables';
+
+
+//lable
+.lable-container{
+    margin-top: -10px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+//space bettween each row
+
+.holder-row2{
+    margin-top:40px;
+}
+.holder-row3{
+    margin-top: 40px;
+}
+.holder-row4{
+    margin-top: 40px;
+}
+.holder-row5{
+    margin-top: 40px;
+}
+.holder-row6{
+    margin-top: 40px;
+}
+.holder-row7{
+    margin-top: 40px;
+}
+
+.holder-container{
+      margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+
+
+.form-container{
+    padding: 50px;
+  
+}
+
+//for container inside container
+.form-container2{
+    
+    border: 1px solid gray;
+    border-radius: 2%;
+    box-shadow: gray 2px 3px 2px 3px;
+}

@@ -1,0 +1,32 @@
+@import "custom-variables";
+@import "stepper";
+@import "Form1";
+@import "Form2";
+@import "form3";
+@import "form5";
+@import "form6";
+@import "form7";
+
+
+
+.topbar-content{
+height: 80px;
+box-shadow: 0 6px  0  rgba(0, 0, 0, 0.1); /* Shadow only below */
+
+}
+
+.languages-container{
+    color: rgb(165, 155, 155);
+    background-color: rgb(170, 168, 168);
+   
+    padding-bottom: 30px;
+ 
+    width: 80px;
+    height: 20px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+}
+
+.logo-container{
+    margin-top: -10px;
+}

@@ -1,0 +1,20 @@
+@import './custom-variables';
+
+.bank-row2{
+    margin-top:40px;
+}
+.bank-row3{
+    margin-top: 40px;
+}
+.bank-row4{
+    margin-top: 40px;
+}
+
+.bank-button{
+    margin-left: 90%;
+    background: linear-gradient(to right,yellow,orange);
+}
+.bank-container{
+        margin-top: 20px;
+    margin-left: 50px;
+}

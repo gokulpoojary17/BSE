@@ -1,0 +1,33 @@
+{
+  "serializationVersion": 2,
+  "settingsParts": [
+    {
+      "suppressions": [],
+      "suppressAppStoreWarnings": false,
+      "showSuppressionInfo": true,
+      "type": "Mendix.Modeler.Suppressions.SuppressionRules, Mendix.Modeler.Core, Version=9.24.28.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "suppressions": [],
+      "disabledBestPractices": [],
+      "readRecommendations": [
+        {
+          "code": "MXP006",
+          "locationObjects": [
+            {
+              "uuid": "55cfe8ca-20af-43db-b812-0c3b4deb1a55",
+              "fullPath": "MyFirstModule.step1valid"
+            },
+            {
+              "uuid": "7b012960-df70-43ad-8830-13d130ae2d49",
+              "fullPath": "actionButton1 (ActionButton) < 08a6283f-5590-4224-85b5-27cba524d451 (LayoutGridColumn) < 8893bc12-3ece-4fad-8fd8-0848367c89f7 (LayoutGridRow) < layoutGrid1 (LayoutGrid) < container44 (DivContainer) < container43 (DivContainer) < container6 (DivContainer) < b46b66b7-a2a1-4830-bd72-8a607bd27c82 (LayoutCallArgument) < c84a405c-1abc-477d-9685-f4d73b69a9b9 (LayoutCall) < MyFirstModule.form1_basicdetails"
+            }
+          ]
+        }
+      ],
+      "suppressedRecommendations": [],
+      "hasShownRecommendationsNotificationForThisApp": true,
+      "type": "Mendix.Modeler.MxAssist.PerformanceBot.Serialization.Configuration.PerformanceBotConfiguration, Mendix.Modeler.MxAssist.PerformanceBot.Serialization, Version=9.24.28.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ]
+}
