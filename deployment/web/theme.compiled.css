@@ -26752,9 +26752,19 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .step-contain {
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
+@media (max-width: 600px) {
+  .stepper-container {
+    width: 60px;
+    font-size: 10px;
+  }
+
+  .step-contain {
+    margin-top: -34px;
+  }
+}
 .lable-container {
   margin-top: -10px;
   margin-left: 80px;
@@ -26949,6 +26959,10 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .logo-container {
   margin-top: -10px;
+}
+
+.details-container {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */

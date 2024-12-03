@@ -16,11 +16,31 @@
 //stepper container
 .full-stepper{
   margin-top: 50px;
+ 
 }
 
 
 //show lable zigzag
 .step-contain{
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
+
+
+//to display in mobile
+@media (max-width: 600px) {
+ 
+.stepper-container{
+    width: 60px;
+    // margin-left: 10px;
+    font-size: 10px;
+
+}
+
+
+
+
+.step-contain{
+  margin-top: -34px;
+}
+}
