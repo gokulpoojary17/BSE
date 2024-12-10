@@ -6,7 +6,14 @@ package myfirstmodule.proxies;
 
 public enum countryresidence
 {
-	india(new java.lang.String[][] { new java.lang.String[] { "en_US", "india" } });
+	india(new java.lang.String[][] { new java.lang.String[] { "en_US", "India" }, new java.lang.String[] { "hi_IN", "भारत" } }),
+	Japan(new java.lang.String[][] { new java.lang.String[] { "en_US", "Japan" } }),
+	Bangladesh(new java.lang.String[][] { new java.lang.String[] { "en_US", "Bangladesh" } }),
+	australia(new java.lang.String[][] { new java.lang.String[] { "en_US", "australia" } }),
+	Mynamar(new java.lang.String[][] { new java.lang.String[] { "en_US", "Mynamar" } }),
+	Shrilanka(new java.lang.String[][] { new java.lang.String[] { "en_US", "Shrilanka" } }),
+	Nepal(new java.lang.String[][] { new java.lang.String[] { "en_US", "Nepal" } }),
+	China(new java.lang.String[][] { new java.lang.String[] { "en_US", "China" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

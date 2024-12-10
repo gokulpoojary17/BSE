@@ -6,7 +6,7 @@ package myfirstmodule.proxies;
 
 public enum adresstype
 {
-	Indian(new java.lang.String[][] { new java.lang.String[] { "en_US", "Indian" } });
+	Indian(new java.lang.String[][] { new java.lang.String[] { "en_US", "Indian" }, new java.lang.String[] { "hi_IN", "भारतीय" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

@@ -6,10 +6,10 @@ package myfirstmodule.proxies;
 
 public enum kyctype
 {
-	adhar(new java.lang.String[][] { new java.lang.String[] { "en_US", "adhar" } }),
-	kracompliant(new java.lang.String[][] { new java.lang.String[] { "en_US", "kracompliant" } }),
-	ckyccomplaint(new java.lang.String[][] { new java.lang.String[] { "en_US", "ckyccomplaint" } }),
-	biometrickyc(new java.lang.String[][] { new java.lang.String[] { "en_US", "biometrickyc" } });
+	adhar(new java.lang.String[][] { new java.lang.String[] { "en_US", "adhar" }, new java.lang.String[] { "hi_IN", "आधार" } }),
+	kracompliant(new java.lang.String[][] { new java.lang.String[] { "en_US", "kracompliant" }, new java.lang.String[] { "hi_IN", "KRA अनुपालन" } }),
+	ckyccomplaint(new java.lang.String[][] { new java.lang.String[] { "en_US", "ckyccomplaint" }, new java.lang.String[] { "hi_IN", "C-KYC शिकायत" } }),
+	biometrickyc(new java.lang.String[][] { new java.lang.String[] { "en_US", "biometrickyc" }, new java.lang.String[] { "hi_IN", "बायोमेट्रिक KYC" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

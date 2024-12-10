@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum subcategory
 {
-	lessthan50_(new java.lang.String[][] { new java.lang.String[] { "en_US", "lessthan50%" } }),
-	theNFEgoverment(new java.lang.String[][] { new java.lang.String[] { "en_US", "theNFEgoverment" } }),
-	anynfethatfulfill(new java.lang.String[][] { new java.lang.String[] { "en_US", "anynfethatfulfill" } });
+	lessthan50_(new java.lang.String[][] { new java.lang.String[] { "en_US", "lessthan50%" }, new java.lang.String[] { "hi_IN", "50% से कम" } }),
+	theNFEgoverment(new java.lang.String[][] { new java.lang.String[] { "en_US", "theNFEgoverment" }, new java.lang.String[] { "hi_IN", "एनएफई सरकार" } }),
+	anynfethatfulfill(new java.lang.String[][] { new java.lang.String[] { "en_US", "anynfethatfulfill" }, new java.lang.String[] { "hi_IN", "कोई भी एनएफई जो पूरा करता है" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum ffi
 {
-	ffi(new java.lang.String[][] { new java.lang.String[] { "en_US", "ffi" } }),
-	drnfe(new java.lang.String[][] { new java.lang.String[] { "en_US", "drnfe" } }),
-	na(new java.lang.String[][] { new java.lang.String[] { "en_US", "na" } });
+	ffi(new java.lang.String[][] { new java.lang.String[] { "en_US", "ffi" }, new java.lang.String[] { "hi_IN", "FFI" } }),
+	drnfe(new java.lang.String[][] { new java.lang.String[] { "en_US", "drnfe" }, new java.lang.String[] { "hi_IN", "डीआरएनएफई" } }),
+	na(new java.lang.String[][] { new java.lang.String[] { "en_US", "na" }, new java.lang.String[] { "hi_IN", "NA" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

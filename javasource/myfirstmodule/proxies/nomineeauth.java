@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum nomineeauth
 {
-	wetsignature(new java.lang.String[][] { new java.lang.String[] { "en_US", "wetsignature" } }),
-	aadhar(new java.lang.String[][] { new java.lang.String[] { "en_US", "aadhar" } }),
-	otpauthentiction(new java.lang.String[][] { new java.lang.String[] { "en_US", "otpauthentiction" } });
+	wetsignature(new java.lang.String[][] { new java.lang.String[] { "en_US", "wetsignature" }, new java.lang.String[] { "hi_IN", "गीला हस्ताक्षर" } }),
+	aadhar(new java.lang.String[][] { new java.lang.String[] { "en_US", "aadhar" }, new java.lang.String[] { "hi_IN", "आधार" } }),
+	otpauthentiction(new java.lang.String[][] { new java.lang.String[] { "en_US", "otpauthentiction" }, new java.lang.String[] { "hi_IN", "OTP प्रमाणीकरण" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

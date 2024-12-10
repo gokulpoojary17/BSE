@@ -6,8 +6,8 @@ package myfirstmodule.proxies;
 
 public enum natureofrelation
 {
-	subsidary(new java.lang.String[][] { new java.lang.String[] { "en_US", "subsidary" } }),
-	controlled(new java.lang.String[][] { new java.lang.String[] { "en_US", "controlled" } });
+	subsidary(new java.lang.String[][] { new java.lang.String[] { "en_US", "subsidary" }, new java.lang.String[] { "hi_IN", "सहायक कंपनी" } }),
+	controlled(new java.lang.String[][] { new java.lang.String[] { "en_US", "controlled" }, new java.lang.String[] { "hi_IN", "नियंत्रित" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

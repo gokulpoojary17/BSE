@@ -6,9 +6,9 @@ package nanoflowcommons.proxies;
 
 public enum Enum_DistanceUnit
 {
-	KILOMETER(new java.lang.String[][] { new java.lang.String[] { "en_US", "KILOMETER" } }),
-	STATUTE_MILE(new java.lang.String[][] { new java.lang.String[] { "en_US", "STATUTE_MILE" } }),
-	NAUTICAL_MILE(new java.lang.String[][] { new java.lang.String[] { "en_US", "NAUTICAL_MILE" } });
+	KILOMETER(new java.lang.String[][] { new java.lang.String[] { "en_US", "KILOMETER" }, new java.lang.String[] { "hi_IN", "किलोमीटर" } }),
+	STATUTE_MILE(new java.lang.String[][] { new java.lang.String[] { "en_US", "STATUTE_MILE" }, new java.lang.String[] { "hi_IN", "STATUTE_MILE" } }),
+	NAUTICAL_MILE(new java.lang.String[][] { new java.lang.String[] { "en_US", "NAUTICAL_MILE" }, new java.lang.String[] { "hi_IN", "NAUTICAL_MILE" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

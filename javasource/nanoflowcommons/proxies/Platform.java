@@ -6,9 +6,9 @@ package nanoflowcommons.proxies;
 
 public enum Platform
 {
-	Web(new java.lang.String[][] { new java.lang.String[] { "en_US", "Web" } }),
-	Native_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Native mobile" } }),
-	Hybrid_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Hybrid mobile" } });
+	Web(new java.lang.String[][] { new java.lang.String[] { "en_US", "Web" }, new java.lang.String[] { "hi_IN", "वेब" } }),
+	Native_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Native mobile" }, new java.lang.String[] { "hi_IN", "स्थानीय मोबाइल" } }),
+	Hybrid_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Hybrid mobile" }, new java.lang.String[] { "hi_IN", "हाइब्रिड मोबाइल" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

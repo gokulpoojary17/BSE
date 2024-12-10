@@ -6,8 +6,8 @@ package myfirstmodule.proxies;
 
 public enum hodingtype
 {
-	Physical(new java.lang.String[][] { new java.lang.String[] { "en_US", "Physical" } }),
-	Demat(new java.lang.String[][] { new java.lang.String[] { "en_US", "Demat" } });
+	Physical(new java.lang.String[][] { new java.lang.String[] { "en_US", "Physical" }, new java.lang.String[] { "hi_IN", "भौतिक" } }),
+	Demat(new java.lang.String[][] { new java.lang.String[] { "en_US", "Demat" }, new java.lang.String[] { "hi_IN", "डिमेट" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

@@ -20,13 +20,11 @@ public class holderdetails
 	 */
 	public enum MemberNames
 	{
-		panexcempt("panexcempt"),
 		pan("pan"),
 		firstname("firstname"),
 		lastname("lastname"),
 		dateofregister("dateofregister"),
 		gender("gender"),
-		occupation("occupation"),
 		taxstatus("taxstatus"),
 		kyctype("kyctype"),
 		mobilenumber("mobilenumber"),
@@ -35,7 +33,11 @@ public class holderdetails
 		emaildeclaration("emaildeclaration"),
 		pancategory("pancategory"),
 		middlename("middlename"),
-		step2completed("step2completed");
+		step2completed("step2completed"),
+		occuptation("occuptation"),
+		panexempt("panexempt"),
+		pkern("pkern"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -138,51 +140,6 @@ public class holderdetails
 	{
 		com.mendix.core.Core.delete(context, getMendixObject());
 	}
-	/**
-	 * Set value of panexcempt
-	 * @param panexcempt
-	 */
-	public final myfirstmodule.proxies.panexcempt getpanexcempt()
-	{
-		return getpanexcempt(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of panexcempt
-	 */
-	public final myfirstmodule.proxies.panexcempt getpanexcempt(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		Object obj = getMendixObject().getValue(context, MemberNames.panexcempt.toString());
-		if (obj == null) {
-			return null;
-		}
-		return myfirstmodule.proxies.panexcempt.valueOf((java.lang.String) obj);
-	}
-
-	/**
-	 * Set value of panexcempt
-	 * @param panexcempt
-	 */
-	public final void setpanexcempt(myfirstmodule.proxies.panexcempt panexcempt)
-	{
-		setpanexcempt(getContext(), panexcempt);
-	}
-
-	/**
-	 * Set value of panexcempt
-	 * @param context
-	 * @param panexcempt
-	 */
-	public final void setpanexcempt(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.panexcempt panexcempt)
-	{
-		if (panexcempt != null) {
-			getMendixObject().setValue(context, MemberNames.panexcempt.toString(), panexcempt.toString());
-		} else {
-			getMendixObject().setValue(context, MemberNames.panexcempt.toString(), null);
-		}
-	}
-
 	/**
 	 * @return value of pan
 	 */
@@ -370,42 +327,6 @@ public class holderdetails
 		} else {
 			getMendixObject().setValue(context, MemberNames.gender.toString(), null);
 		}
-	}
-
-	/**
-	 * @return value of occupation
-	 */
-	public final java.lang.String getoccupation()
-	{
-		return getoccupation(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of occupation
-	 */
-	public final java.lang.String getoccupation(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.occupation.toString());
-	}
-
-	/**
-	 * Set value of occupation
-	 * @param occupation
-	 */
-	public final void setoccupation(java.lang.String occupation)
-	{
-		setoccupation(getContext(), occupation);
-	}
-
-	/**
-	 * Set value of occupation
-	 * @param context
-	 * @param occupation
-	 */
-	public final void setoccupation(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String occupation)
-	{
-		getMendixObject().setValue(context, MemberNames.occupation.toString(), occupation);
 	}
 
 	/**
@@ -757,6 +678,159 @@ public class holderdetails
 	public final void setstep2completed(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean step2completed)
 	{
 		getMendixObject().setValue(context, MemberNames.step2completed.toString(), step2completed);
+	}
+
+	/**
+	 * Set value of occuptation
+	 * @param occuptation
+	 */
+	public final myfirstmodule.proxies.occupation getoccuptation()
+	{
+		return getoccuptation(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of occuptation
+	 */
+	public final myfirstmodule.proxies.occupation getoccuptation(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.occuptation.toString());
+		if (obj == null) {
+			return null;
+		}
+		return myfirstmodule.proxies.occupation.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of occuptation
+	 * @param occuptation
+	 */
+	public final void setoccuptation(myfirstmodule.proxies.occupation occuptation)
+	{
+		setoccuptation(getContext(), occuptation);
+	}
+
+	/**
+	 * Set value of occuptation
+	 * @param context
+	 * @param occuptation
+	 */
+	public final void setoccuptation(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.occupation occuptation)
+	{
+		if (occuptation != null) {
+			getMendixObject().setValue(context, MemberNames.occuptation.toString(), occuptation.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.occuptation.toString(), null);
+		}
+	}
+
+	/**
+	 * @return value of panexempt
+	 */
+	public final java.lang.Boolean getpanexempt()
+	{
+		return getpanexempt(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of panexempt
+	 */
+	public final java.lang.Boolean getpanexempt(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.panexempt.toString());
+	}
+
+	/**
+	 * Set value of panexempt
+	 * @param panexempt
+	 */
+	public final void setpanexempt(java.lang.Boolean panexempt)
+	{
+		setpanexempt(getContext(), panexempt);
+	}
+
+	/**
+	 * Set value of panexempt
+	 * @param context
+	 * @param panexempt
+	 */
+	public final void setpanexempt(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean panexempt)
+	{
+		getMendixObject().setValue(context, MemberNames.panexempt.toString(), panexempt);
+	}
+
+	/**
+	 * @return value of pkern
+	 */
+	public final java.lang.String getpkern()
+	{
+		return getpkern(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of pkern
+	 */
+	public final java.lang.String getpkern(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.pkern.toString());
+	}
+
+	/**
+	 * Set value of pkern
+	 * @param pkern
+	 */
+	public final void setpkern(java.lang.String pkern)
+	{
+		setpkern(getContext(), pkern);
+	}
+
+	/**
+	 * Set value of pkern
+	 * @param context
+	 * @param pkern
+	 */
+	public final void setpkern(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String pkern)
+	{
+		getMendixObject().setValue(context, MemberNames.pkern.toString(), pkern);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

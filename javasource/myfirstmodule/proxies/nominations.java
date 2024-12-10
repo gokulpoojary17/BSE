@@ -31,7 +31,16 @@ public class nominations
 		panexempt("panexempt"),
 		nomineepan("nomineepan"),
 		nomineeauthentication("nomineeauthentication"),
-		step6completed("step6completed");
+		step6completed("step6completed"),
+		gaurdianfirstname("gaurdianfirstname"),
+		guardianlastname("guardianlastname"),
+		gaurdianmiddlename("gaurdianmiddlename"),
+		guardianpanexempt("guardianpanexempt"),
+		guardianpancategory("guardianpancategory"),
+		guardianpkern("guardianpkern"),
+		gaurdiandateofbirth("gaurdiandateofbirth"),
+		gaurdianpan("gaurdianpan"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -591,6 +600,339 @@ public class nominations
 	public final void setstep6completed(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean step6completed)
 	{
 		getMendixObject().setValue(context, MemberNames.step6completed.toString(), step6completed);
+	}
+
+	/**
+	 * @return value of gaurdianfirstname
+	 */
+	public final java.lang.String getgaurdianfirstname()
+	{
+		return getgaurdianfirstname(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of gaurdianfirstname
+	 */
+	public final java.lang.String getgaurdianfirstname(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.gaurdianfirstname.toString());
+	}
+
+	/**
+	 * Set value of gaurdianfirstname
+	 * @param gaurdianfirstname
+	 */
+	public final void setgaurdianfirstname(java.lang.String gaurdianfirstname)
+	{
+		setgaurdianfirstname(getContext(), gaurdianfirstname);
+	}
+
+	/**
+	 * Set value of gaurdianfirstname
+	 * @param context
+	 * @param gaurdianfirstname
+	 */
+	public final void setgaurdianfirstname(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String gaurdianfirstname)
+	{
+		getMendixObject().setValue(context, MemberNames.gaurdianfirstname.toString(), gaurdianfirstname);
+	}
+
+	/**
+	 * @return value of guardianlastname
+	 */
+	public final java.lang.String getguardianlastname()
+	{
+		return getguardianlastname(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of guardianlastname
+	 */
+	public final java.lang.String getguardianlastname(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.guardianlastname.toString());
+	}
+
+	/**
+	 * Set value of guardianlastname
+	 * @param guardianlastname
+	 */
+	public final void setguardianlastname(java.lang.String guardianlastname)
+	{
+		setguardianlastname(getContext(), guardianlastname);
+	}
+
+	/**
+	 * Set value of guardianlastname
+	 * @param context
+	 * @param guardianlastname
+	 */
+	public final void setguardianlastname(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String guardianlastname)
+	{
+		getMendixObject().setValue(context, MemberNames.guardianlastname.toString(), guardianlastname);
+	}
+
+	/**
+	 * @return value of gaurdianmiddlename
+	 */
+	public final java.lang.String getgaurdianmiddlename()
+	{
+		return getgaurdianmiddlename(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of gaurdianmiddlename
+	 */
+	public final java.lang.String getgaurdianmiddlename(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.gaurdianmiddlename.toString());
+	}
+
+	/**
+	 * Set value of gaurdianmiddlename
+	 * @param gaurdianmiddlename
+	 */
+	public final void setgaurdianmiddlename(java.lang.String gaurdianmiddlename)
+	{
+		setgaurdianmiddlename(getContext(), gaurdianmiddlename);
+	}
+
+	/**
+	 * Set value of gaurdianmiddlename
+	 * @param context
+	 * @param gaurdianmiddlename
+	 */
+	public final void setgaurdianmiddlename(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String gaurdianmiddlename)
+	{
+		getMendixObject().setValue(context, MemberNames.gaurdianmiddlename.toString(), gaurdianmiddlename);
+	}
+
+	/**
+	 * @return value of guardianpanexempt
+	 */
+	public final java.lang.Boolean getguardianpanexempt()
+	{
+		return getguardianpanexempt(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of guardianpanexempt
+	 */
+	public final java.lang.Boolean getguardianpanexempt(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.guardianpanexempt.toString());
+	}
+
+	/**
+	 * Set value of guardianpanexempt
+	 * @param guardianpanexempt
+	 */
+	public final void setguardianpanexempt(java.lang.Boolean guardianpanexempt)
+	{
+		setguardianpanexempt(getContext(), guardianpanexempt);
+	}
+
+	/**
+	 * Set value of guardianpanexempt
+	 * @param context
+	 * @param guardianpanexempt
+	 */
+	public final void setguardianpanexempt(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean guardianpanexempt)
+	{
+		getMendixObject().setValue(context, MemberNames.guardianpanexempt.toString(), guardianpanexempt);
+	}
+
+	/**
+	 * Set value of guardianpancategory
+	 * @param guardianpancategory
+	 */
+	public final myfirstmodule.proxies.pancategory getguardianpancategory()
+	{
+		return getguardianpancategory(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of guardianpancategory
+	 */
+	public final myfirstmodule.proxies.pancategory getguardianpancategory(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.guardianpancategory.toString());
+		if (obj == null) {
+			return null;
+		}
+		return myfirstmodule.proxies.pancategory.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of guardianpancategory
+	 * @param guardianpancategory
+	 */
+	public final void setguardianpancategory(myfirstmodule.proxies.pancategory guardianpancategory)
+	{
+		setguardianpancategory(getContext(), guardianpancategory);
+	}
+
+	/**
+	 * Set value of guardianpancategory
+	 * @param context
+	 * @param guardianpancategory
+	 */
+	public final void setguardianpancategory(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.pancategory guardianpancategory)
+	{
+		if (guardianpancategory != null) {
+			getMendixObject().setValue(context, MemberNames.guardianpancategory.toString(), guardianpancategory.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.guardianpancategory.toString(), null);
+		}
+	}
+
+	/**
+	 * @return value of guardianpkern
+	 */
+	public final java.lang.String getguardianpkern()
+	{
+		return getguardianpkern(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of guardianpkern
+	 */
+	public final java.lang.String getguardianpkern(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.guardianpkern.toString());
+	}
+
+	/**
+	 * Set value of guardianpkern
+	 * @param guardianpkern
+	 */
+	public final void setguardianpkern(java.lang.String guardianpkern)
+	{
+		setguardianpkern(getContext(), guardianpkern);
+	}
+
+	/**
+	 * Set value of guardianpkern
+	 * @param context
+	 * @param guardianpkern
+	 */
+	public final void setguardianpkern(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String guardianpkern)
+	{
+		getMendixObject().setValue(context, MemberNames.guardianpkern.toString(), guardianpkern);
+	}
+
+	/**
+	 * @return value of gaurdiandateofbirth
+	 */
+	public final java.lang.String getgaurdiandateofbirth()
+	{
+		return getgaurdiandateofbirth(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of gaurdiandateofbirth
+	 */
+	public final java.lang.String getgaurdiandateofbirth(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.gaurdiandateofbirth.toString());
+	}
+
+	/**
+	 * Set value of gaurdiandateofbirth
+	 * @param gaurdiandateofbirth
+	 */
+	public final void setgaurdiandateofbirth(java.lang.String gaurdiandateofbirth)
+	{
+		setgaurdiandateofbirth(getContext(), gaurdiandateofbirth);
+	}
+
+	/**
+	 * Set value of gaurdiandateofbirth
+	 * @param context
+	 * @param gaurdiandateofbirth
+	 */
+	public final void setgaurdiandateofbirth(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String gaurdiandateofbirth)
+	{
+		getMendixObject().setValue(context, MemberNames.gaurdiandateofbirth.toString(), gaurdiandateofbirth);
+	}
+
+	/**
+	 * @return value of gaurdianpan
+	 */
+	public final java.lang.String getgaurdianpan()
+	{
+		return getgaurdianpan(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of gaurdianpan
+	 */
+	public final java.lang.String getgaurdianpan(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.gaurdianpan.toString());
+	}
+
+	/**
+	 * Set value of gaurdianpan
+	 * @param gaurdianpan
+	 */
+	public final void setgaurdianpan(java.lang.String gaurdianpan)
+	{
+		setgaurdianpan(getContext(), gaurdianpan);
+	}
+
+	/**
+	 * Set value of gaurdianpan
+	 * @param context
+	 * @param gaurdianpan
+	 */
+	public final void setgaurdianpan(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String gaurdianpan)
+	{
+		getMendixObject().setValue(context, MemberNames.gaurdianpan.toString(), gaurdianpan);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

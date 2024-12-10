@@ -21,6 +21,7 @@ public class Uploaddocument
 	public enum MemberNames
 	{
 		document("document"),
+		dataid("dataid"),
 		Uploaddocument_FileDocument("MyFirstModule.Uploaddocument_FileDocument"),
 		Uploaddocument_Image("MyFirstModule.Uploaddocument_Image"),
 		Uploaddocument_Image_2("MyFirstModule.Uploaddocument_Image_2");
@@ -160,6 +161,42 @@ public class Uploaddocument
 	public final void setdocument(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String document)
 	{
 		getMendixObject().setValue(context, MemberNames.document.toString(), document);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

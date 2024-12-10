@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum holdingnature
 {
-	single_holding(new java.lang.String[][] { new java.lang.String[] { "en_US", "single holding" } }),
-	joint_holding(new java.lang.String[][] { new java.lang.String[] { "en_US", "joint holding" } }),
-	anyone_or_survivorholding(new java.lang.String[][] { new java.lang.String[] { "en_US", "anyone or survivorholding" } });
+	single_holding(new java.lang.String[][] { new java.lang.String[] { "en_US", "Single Holding" }, new java.lang.String[] { "hi_IN", "एकल होल्डिंग" } }),
+	joint_holding(new java.lang.String[][] { new java.lang.String[] { "en_US", "Joint Holding" }, new java.lang.String[] { "hi_IN", "संयुक्त होल्डिंग" } }),
+	anyone_or_survivorholding(new java.lang.String[][] { new java.lang.String[] { "en_US", "Anyone or SurvivorHolding" }, new java.lang.String[] { "hi_IN", "कोई भी या उत्तराधिकारी जो होल्डिंग कर रहा है" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

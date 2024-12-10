@@ -6,8 +6,8 @@ package myfirstmodule.proxies;
 
 public enum datsource
 {
-	yes(new java.lang.String[][] { new java.lang.String[] { "en_US", "physical" } }),
-	no(new java.lang.String[][] { new java.lang.String[] { "en_US", "electronic" } });
+	yes(new java.lang.String[][] { new java.lang.String[] { "en_US", "physical" }, new java.lang.String[] { "hi_IN", "शारीरिक" } }),
+	no(new java.lang.String[][] { new java.lang.String[] { "en_US", "electronic" }, new java.lang.String[] { "hi_IN", "इलेक्ट्रॉनिक" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

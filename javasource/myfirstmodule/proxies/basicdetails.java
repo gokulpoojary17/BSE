@@ -26,7 +26,8 @@ public class basicdetails
 		Dealername("Dealername"),
 		step1completed("step1completed"),
 		isactive("isactive"),
-		Branchname("Branchname");
+		Branchname("Branchname"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -388,6 +389,42 @@ public class basicdetails
 	public final void setBranchname(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String branchname)
 	{
 		getMendixObject().setValue(context, MemberNames.Branchname.toString(), branchname);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Long getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Long getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Long) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Long dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

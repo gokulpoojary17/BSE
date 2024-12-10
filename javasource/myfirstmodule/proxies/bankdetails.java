@@ -27,7 +27,8 @@ public class bankdetails
 		branchname("branchname"),
 		ifsc("ifsc"),
 		bankcity("bankcity"),
-		step3completed("step3completed");
+		step3completed("step3completed"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -434,6 +435,42 @@ public class bankdetails
 	public final void setstep3completed(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean step3completed)
 	{
 		getMendixObject().setValue(context, MemberNames.step3completed.toString(), step3completed);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

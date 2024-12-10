@@ -6,10 +6,10 @@ package myfirstmodule.proxies;
 
 public enum servicesector
 {
-	forexchange(new java.lang.String[][] { new java.lang.String[] { "en_US", "forexchange" } }),
-	gaming(new java.lang.String[][] { new java.lang.String[] { "en_US", "gaming" } }),
-	mony_laundring(new java.lang.String[][] { new java.lang.String[] { "en_US", "mony laundring" } }),
-	notapplicable(new java.lang.String[][] { new java.lang.String[] { "en_US", "notapplicable" } });
+	forexchange(new java.lang.String[][] { new java.lang.String[] { "en_US", "forexchange" }, new java.lang.String[] { "hi_IN", "विदेशी विनिमय" } }),
+	gaming(new java.lang.String[][] { new java.lang.String[] { "en_US", "gaming" }, new java.lang.String[] { "hi_IN", "गेमिंग" } }),
+	mony_laundring(new java.lang.String[][] { new java.lang.String[] { "en_US", "mony laundring" }, new java.lang.String[] { "hi_IN", "मनी लॉन्ड्रिंग" } }),
+	notapplicable(new java.lang.String[][] { new java.lang.String[] { "en_US", "notapplicable" }, new java.lang.String[] { "hi_IN", "लागू नहीं है" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

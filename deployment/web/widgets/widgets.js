@@ -1,1 +1,1 @@
-define([], {});
+define(["jQueryUIDateTimePicker/widget/jQueryUIDateTimePicker"], {});

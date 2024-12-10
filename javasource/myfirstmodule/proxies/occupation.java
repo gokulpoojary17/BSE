@@ -6,14 +6,14 @@ package myfirstmodule.proxies;
 
 public enum occupation
 {
-	business(new java.lang.String[][] { new java.lang.String[] { "en_US", "business" } }),
-	service(new java.lang.String[][] { new java.lang.String[] { "en_US", "service" } }),
-	agriculture(new java.lang.String[][] { new java.lang.String[] { "en_US", "agriculture" } }),
-	retired(new java.lang.String[][] { new java.lang.String[] { "en_US", "retired" } }),
-	housewife(new java.lang.String[][] { new java.lang.String[] { "en_US", "housewife" } }),
-	student(new java.lang.String[][] { new java.lang.String[] { "en_US", "student" } }),
-	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" } }),
-	proffsional(new java.lang.String[][] { new java.lang.String[] { "en_US", "proffsional" } });
+	business(new java.lang.String[][] { new java.lang.String[] { "en_US", "business" }, new java.lang.String[] { "hi_IN", "व्यापार" } }),
+	service(new java.lang.String[][] { new java.lang.String[] { "en_US", "service" }, new java.lang.String[] { "hi_IN", "सेवा" } }),
+	agriculture(new java.lang.String[][] { new java.lang.String[] { "en_US", "agriculture" }, new java.lang.String[] { "hi_IN", "कृषि" } }),
+	retired(new java.lang.String[][] { new java.lang.String[] { "en_US", "retired" }, new java.lang.String[] { "hi_IN", "सेवानिवृत्त" } }),
+	housewife(new java.lang.String[][] { new java.lang.String[] { "en_US", "housewife" }, new java.lang.String[] { "hi_IN", "गृहिणी" } }),
+	student(new java.lang.String[][] { new java.lang.String[] { "en_US", "student" }, new java.lang.String[] { "hi_IN", "छात्र" } }),
+	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" }, new java.lang.String[] { "hi_IN", "अन्य" } }),
+	proffsional(new java.lang.String[][] { new java.lang.String[] { "en_US", "proffsional" }, new java.lang.String[] { "hi_IN", "पेशेवर" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

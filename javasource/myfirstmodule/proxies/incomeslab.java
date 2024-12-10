@@ -6,7 +6,7 @@ package myfirstmodule.proxies;
 
 public enum incomeslab
 {
-	below1lakh(new java.lang.String[][] { new java.lang.String[] { "en_US", "below1lakh" } }),
+	below1lakh(new java.lang.String[][] { new java.lang.String[] { "en_US", "below1lakh" }, new java.lang.String[] { "hi_IN", "1 लाख से नीचे" } }),
 	_1to5lakh(new java.lang.String[][] { new java.lang.String[] { "en_US", "1to5lakh" } }),
 	_5to10lakx(new java.lang.String[][] { new java.lang.String[] { "en_US", "5to10lakx" } }),
 	_10_100lakh(new java.lang.String[][] { new java.lang.String[] { "en_US", "10-100lakh" } });

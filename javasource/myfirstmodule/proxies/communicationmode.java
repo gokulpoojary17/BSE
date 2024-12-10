@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum communicationmode
 {
-	email(new java.lang.String[][] { new java.lang.String[] { "en_US", "email" } }),
-	mobilealerts(new java.lang.String[][] { new java.lang.String[] { "en_US", "mobilealerts" } }),
-	physical(new java.lang.String[][] { new java.lang.String[] { "en_US", "physical" } });
+	email(new java.lang.String[][] { new java.lang.String[] { "en_US", "email" }, new java.lang.String[] { "hi_IN", "ईमेल" } }),
+	mobilealerts(new java.lang.String[][] { new java.lang.String[] { "en_US", "mobilealerts" }, new java.lang.String[] { "hi_IN", "मोबाइल अलर्ट" } }),
+	physical(new java.lang.String[][] { new java.lang.String[] { "en_US", "physical" }, new java.lang.String[] { "hi_IN", "शारीरिक" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

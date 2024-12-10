@@ -6,7 +6,8 @@ package myfirstmodule.proxies;
 
 public enum accounttype
 {
-	current(new java.lang.String[][] { new java.lang.String[] { "en_US", "current" } });
+	current(new java.lang.String[][] { new java.lang.String[] { "en_US", "current" }, new java.lang.String[] { "hi_IN", "वर्तमान" } }),
+	savings(new java.lang.String[][] { new java.lang.String[] { "en_US", "savings" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

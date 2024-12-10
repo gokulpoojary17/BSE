@@ -6,12 +6,12 @@ package myfirstmodule.proxies;
 
 public enum Adresstype2
 {
-	residenceorbusiness(new java.lang.String[][] { new java.lang.String[] { "en_US", "residenceorbusiness" } }),
-	residence(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence" } }),
-	business(new java.lang.String[][] { new java.lang.String[] { "en_US", "business" } }),
-	residence_or_business_foreign(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence or business foreign" } }),
-	residence_foriegn(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence foriegn" } }),
-	business_foriegn(new java.lang.String[][] { new java.lang.String[] { "en_US", "business foriegn" } });
+	residenceorbusiness(new java.lang.String[][] { new java.lang.String[] { "en_US", "residenceorbusiness" }, new java.lang.String[] { "hi_IN", "निवास या व्यवसाय" } }),
+	residence(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence" }, new java.lang.String[] { "hi_IN", "निवास" } }),
+	business(new java.lang.String[][] { new java.lang.String[] { "en_US", "business" }, new java.lang.String[] { "hi_IN", "व्यापार" } }),
+	residence_or_business_foreign(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence or business foreign" }, new java.lang.String[] { "hi_IN", "विदेशी निवास या व्यवसाय" } }),
+	residence_foriegn(new java.lang.String[][] { new java.lang.String[] { "en_US", "residence foriegn" }, new java.lang.String[] { "hi_IN", "विदेशी निवास" } }),
+	business_foriegn(new java.lang.String[][] { new java.lang.String[] { "en_US", "business foriegn" }, new java.lang.String[] { "hi_IN", "विदेशी व्यापार" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

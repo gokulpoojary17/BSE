@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum occupatuiontype
 {
-	bussines(new java.lang.String[][] { new java.lang.String[] { "en_US", "bussines" } }),
-	services(new java.lang.String[][] { new java.lang.String[] { "en_US", "services" } }),
-	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" } });
+	bussines(new java.lang.String[][] { new java.lang.String[] { "en_US", "bussines" }, new java.lang.String[] { "hi_IN", "व्यापार" } }),
+	services(new java.lang.String[][] { new java.lang.String[] { "en_US", "services" }, new java.lang.String[] { "hi_IN", "सेवाएँ" } }),
+	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" }, new java.lang.String[] { "hi_IN", "अन्य" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

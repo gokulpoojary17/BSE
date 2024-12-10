@@ -6,8 +6,8 @@ package myfirstmodule.proxies;
 
 public enum taxresident
 {
-	yes(new java.lang.String[][] { new java.lang.String[] { "en_US", "yes" } }),
-	no(new java.lang.String[][] { new java.lang.String[] { "en_US", "no" } });
+	yes(new java.lang.String[][] { new java.lang.String[] { "en_US", "yes" }, new java.lang.String[] { "hi_IN", "हाँ" } }),
+	no(new java.lang.String[][] { new java.lang.String[] { "en_US", "no" }, new java.lang.String[] { "hi_IN", "नहीं" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

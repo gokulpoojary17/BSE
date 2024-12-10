@@ -6,11 +6,11 @@ package myfirstmodule.proxies;
 
 public enum nonfinancial
 {
-	listetd_for(new java.lang.String[][] { new java.lang.String[] { "en_US", "listetd for" } }),
-	related_tolistedentiry(new java.lang.String[][] { new java.lang.String[] { "en_US", "related tolistedentiry" } }),
-	activenffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "activenffe" } }),
-	passivenffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "passivenffe" } }),
-	notapplicable_for_nffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "notapplicable for nffe" } });
+	listetd_for(new java.lang.String[][] { new java.lang.String[] { "en_US", "listetd for" }, new java.lang.String[] { "hi_IN", "सूचीबद्ध किया गया" } }),
+	related_tolistedentiry(new java.lang.String[][] { new java.lang.String[] { "en_US", "related tolistedentiry" }, new java.lang.String[] { "hi_IN", "सूचीबद्ध इकाई से संबंधित" } }),
+	activenffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "activenffe" }, new java.lang.String[] { "hi_IN", "सक्रिय एनएफई" } }),
+	passivenffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "passivenffe" }, new java.lang.String[] { "hi_IN", "पैसिव एनएफई" } }),
+	notapplicable_for_nffe(new java.lang.String[][] { new java.lang.String[] { "en_US", "notapplicable for nffe" }, new java.lang.String[] { "hi_IN", "NFFE के लिए लागू नहीं है" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

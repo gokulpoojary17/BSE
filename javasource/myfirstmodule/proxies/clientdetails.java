@@ -26,7 +26,8 @@ public class clientdetails
 		pmsentity("pmsentity"),
 		holdingnature("holdingnature"),
 		holdingtype("holdingtype"),
-		redemptionpaymode("redemptionpaymode");
+		redemptionpaymode("redemptionpaymode"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -340,7 +341,7 @@ public class clientdetails
 	 * Set value of holdingtype
 	 * @param holdingtype
 	 */
-	public final myfirstmodule.proxies.holdingtype getholdingtype()
+	public final myfirstmodule.proxies.hodingtype getholdingtype()
 	{
 		return getholdingtype(getContext());
 	}
@@ -349,20 +350,20 @@ public class clientdetails
 	 * @param context
 	 * @return value of holdingtype
 	 */
-	public final myfirstmodule.proxies.holdingtype getholdingtype(com.mendix.systemwideinterfaces.core.IContext context)
+	public final myfirstmodule.proxies.hodingtype getholdingtype(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		Object obj = getMendixObject().getValue(context, MemberNames.holdingtype.toString());
 		if (obj == null) {
 			return null;
 		}
-		return myfirstmodule.proxies.holdingtype.valueOf((java.lang.String) obj);
+		return myfirstmodule.proxies.hodingtype.valueOf((java.lang.String) obj);
 	}
 
 	/**
 	 * Set value of holdingtype
 	 * @param holdingtype
 	 */
-	public final void setholdingtype(myfirstmodule.proxies.holdingtype holdingtype)
+	public final void setholdingtype(myfirstmodule.proxies.hodingtype holdingtype)
 	{
 		setholdingtype(getContext(), holdingtype);
 	}
@@ -372,7 +373,7 @@ public class clientdetails
 	 * @param context
 	 * @param holdingtype
 	 */
-	public final void setholdingtype(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.holdingtype holdingtype)
+	public final void setholdingtype(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.hodingtype holdingtype)
 	{
 		if (holdingtype != null) {
 			getMendixObject().setValue(context, MemberNames.holdingtype.toString(), holdingtype.toString());
@@ -424,6 +425,42 @@ public class clientdetails
 		} else {
 			getMendixObject().setValue(context, MemberNames.redemptionpaymode.toString(), null);
 		}
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

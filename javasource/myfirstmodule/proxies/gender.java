@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum gender
 {
-	male(new java.lang.String[][] { new java.lang.String[] { "en_US", "male" } }),
-	female(new java.lang.String[][] { new java.lang.String[] { "en_US", "female" } }),
-	other(new java.lang.String[][] { new java.lang.String[] { "en_US", "other" } });
+	male(new java.lang.String[][] { new java.lang.String[] { "en_US", "male" }, new java.lang.String[] { "hi_IN", "पुरुष" } }),
+	female(new java.lang.String[][] { new java.lang.String[] { "en_US", "female" }, new java.lang.String[] { "hi_IN", "महिला" } }),
+	other(new java.lang.String[][] { new java.lang.String[] { "en_US", "other" }, new java.lang.String[] { "hi_IN", "अन्य" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

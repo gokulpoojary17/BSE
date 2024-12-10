@@ -57,7 +57,9 @@ public class FACTA
 		busineesname("busineesname"),
 		subcategory("subcategory"),
 		politicllyexposed("politicllyexposed"),
-		step7completd("step7completd");
+		step7completd("step7completd"),
+		selfdeclaration("selfdeclaration"),
+		dataid("dataid");
 
 		private final java.lang.String metaName;
 
@@ -1133,9 +1135,10 @@ public class FACTA
 	}
 
 	/**
-	 * @return value of entityexemption
+	 * Set value of entityexemption
+	 * @param entityexemption
 	 */
-	public final java.lang.String getentityexemption()
+	public final myfirstmodule.proxies.entityexemptioncode getentityexemption()
 	{
 		return getentityexemption(getContext());
 	}
@@ -1144,16 +1147,20 @@ public class FACTA
 	 * @param context
 	 * @return value of entityexemption
 	 */
-	public final java.lang.String getentityexemption(com.mendix.systemwideinterfaces.core.IContext context)
+	public final myfirstmodule.proxies.entityexemptioncode getentityexemption(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.entityexemption.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.entityexemption.toString());
+		if (obj == null) {
+			return null;
+		}
+		return myfirstmodule.proxies.entityexemptioncode.valueOf((java.lang.String) obj);
 	}
 
 	/**
 	 * Set value of entityexemption
 	 * @param entityexemption
 	 */
-	public final void setentityexemption(java.lang.String entityexemption)
+	public final void setentityexemption(myfirstmodule.proxies.entityexemptioncode entityexemption)
 	{
 		setentityexemption(getContext(), entityexemption);
 	}
@@ -1163,9 +1170,13 @@ public class FACTA
 	 * @param context
 	 * @param entityexemption
 	 */
-	public final void setentityexemption(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String entityexemption)
+	public final void setentityexemption(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.entityexemptioncode entityexemption)
 	{
-		getMendixObject().setValue(context, MemberNames.entityexemption.toString(), entityexemption);
+		if (entityexemption != null) {
+			getMendixObject().setValue(context, MemberNames.entityexemption.toString(), entityexemption.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.entityexemption.toString(), null);
+		}
 	}
 
 	/**
@@ -1688,6 +1699,78 @@ public class FACTA
 	public final void setstep7completd(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean step7completd)
 	{
 		getMendixObject().setValue(context, MemberNames.step7completd.toString(), step7completd);
+	}
+
+	/**
+	 * @return value of selfdeclaration
+	 */
+	public final java.lang.Boolean getselfdeclaration()
+	{
+		return getselfdeclaration(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of selfdeclaration
+	 */
+	public final java.lang.Boolean getselfdeclaration(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.selfdeclaration.toString());
+	}
+
+	/**
+	 * Set value of selfdeclaration
+	 * @param selfdeclaration
+	 */
+	public final void setselfdeclaration(java.lang.Boolean selfdeclaration)
+	{
+		setselfdeclaration(getContext(), selfdeclaration);
+	}
+
+	/**
+	 * Set value of selfdeclaration
+	 * @param context
+	 * @param selfdeclaration
+	 */
+	public final void setselfdeclaration(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean selfdeclaration)
+	{
+		getMendixObject().setValue(context, MemberNames.selfdeclaration.toString(), selfdeclaration);
+	}
+
+	/**
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid()
+	{
+		return getdataid(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of dataid
+	 */
+	public final java.lang.Integer getdataid(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.dataid.toString());
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param dataid
+	 */
+	public final void setdataid(java.lang.Integer dataid)
+	{
+		setdataid(getContext(), dataid);
+	}
+
+	/**
+	 * Set value of dataid
+	 * @param context
+	 * @param dataid
+	 */
+	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
+	{
+		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
 	/**

@@ -6,8 +6,8 @@ package myfirstmodule.proxies;
 
 public enum giinapllicable
 {
-	applieadfor(new java.lang.String[][] { new java.lang.String[] { "en_US", "applieadfor" } }),
-	notrequired(new java.lang.String[][] { new java.lang.String[] { "en_US", "notrequired" } });
+	applieadfor(new java.lang.String[][] { new java.lang.String[] { "en_US", "applieadfor" }, new java.lang.String[] { "hi_IN", "आवेदन किया गया है" } }),
+	notrequired(new java.lang.String[][] { new java.lang.String[] { "en_US", "notrequired" }, new java.lang.String[] { "hi_IN", "आवश्यक नहीं है" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

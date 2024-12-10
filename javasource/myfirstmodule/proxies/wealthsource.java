@@ -6,14 +6,14 @@ package myfirstmodule.proxies;
 
 public enum wealthsource
 {
-	salary(new java.lang.String[][] { new java.lang.String[] { "en_US", "salary" } }),
-	bussiness_income(new java.lang.String[][] { new java.lang.String[] { "en_US", "bussiness income" } }),
-	gift(new java.lang.String[][] { new java.lang.String[] { "en_US", "gift" } }),
-	ancestralpropert(new java.lang.String[][] { new java.lang.String[] { "en_US", "ancestralpropert" } }),
-	rentalincome(new java.lang.String[][] { new java.lang.String[] { "en_US", "rentalincome" } }),
-	prizemoney(new java.lang.String[][] { new java.lang.String[] { "en_US", "prizemoney" } }),
-	royalty(new java.lang.String[][] { new java.lang.String[] { "en_US", "royalty" } }),
-	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" } });
+	salary(new java.lang.String[][] { new java.lang.String[] { "en_US", "salary" }, new java.lang.String[] { "hi_IN", "वेतन" } }),
+	bussiness_income(new java.lang.String[][] { new java.lang.String[] { "en_US", "bussiness income" }, new java.lang.String[] { "hi_IN", "व्यवसाय आय" } }),
+	gift(new java.lang.String[][] { new java.lang.String[] { "en_US", "gift" }, new java.lang.String[] { "hi_IN", "उपहार" } }),
+	ancestralpropert(new java.lang.String[][] { new java.lang.String[] { "en_US", "ancestralpropert" }, new java.lang.String[] { "hi_IN", "पैतृक संपत्ति" } }),
+	rentalincome(new java.lang.String[][] { new java.lang.String[] { "en_US", "rentalincome" }, new java.lang.String[] { "hi_IN", "किराये की आय" } }),
+	prizemoney(new java.lang.String[][] { new java.lang.String[] { "en_US", "prizemoney" }, new java.lang.String[] { "hi_IN", "पुरस्कार राशि" } }),
+	royalty(new java.lang.String[][] { new java.lang.String[] { "en_US", "royalty" }, new java.lang.String[] { "hi_IN", "रॉयल्टी" } }),
+	others(new java.lang.String[][] { new java.lang.String[] { "en_US", "others" }, new java.lang.String[] { "hi_IN", "अन्य" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

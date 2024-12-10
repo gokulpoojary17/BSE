@@ -6,9 +6,9 @@ package myfirstmodule.proxies;
 
 public enum pancategory
 {
-	sikkim_resident(new java.lang.String[][] { new java.lang.String[] { "en_US", "sikkim resident" } }),
-	officil_liquidiator(new java.lang.String[][] { new java.lang.String[] { "en_US", "officil liquidiator" } }),
-	courtreciever(new java.lang.String[][] { new java.lang.String[] { "en_US", "courtreciever" } });
+	sikkim_resident(new java.lang.String[][] { new java.lang.String[] { "en_US", "sikkim resident" }, new java.lang.String[] { "hi_IN", "सिक्किम निवासी" } }),
+	officil_liquidiator(new java.lang.String[][] { new java.lang.String[] { "en_US", "officil liquidiator" }, new java.lang.String[] { "hi_IN", "आधिकारिक लिक्विडेटर" } }),
+	courtreciever(new java.lang.String[][] { new java.lang.String[] { "en_US", "courtreciever" }, new java.lang.String[] { "hi_IN", "कोर्ट रिसीवर" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

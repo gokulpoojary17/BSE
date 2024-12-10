@@ -6,7 +6,10 @@ package myfirstmodule.proxies;
 
 public enum iddoc
 {
-	pan(new java.lang.String[][] { new java.lang.String[] { "en_US", "pan" } });
+	pan(new java.lang.String[][] { new java.lang.String[] { "en_US", "PAN" }, new java.lang.String[] { "hi_IN", "PAN" } }),
+	pasport(new java.lang.String[][] { new java.lang.String[] { "en_US", "pasport" } }),
+	Election_ID_Card(new java.lang.String[][] { new java.lang.String[] { "en_US", "Election ID Card" } }),
+	Driving_Licence(new java.lang.String[][] { new java.lang.String[] { "en_US", "Driving Licence" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 

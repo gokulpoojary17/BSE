@@ -6,7 +6,7 @@ package myfirstmodule.proxies;
 
 public enum pupose
 {
-	self(new java.lang.String[][] { new java.lang.String[] { "en_US", "self" } });
+	self(new java.lang.String[][] { new java.lang.String[] { "en_US", "self" }, new java.lang.String[] { "hi_IN", "स्वयं" } });
 
 	private final java.util.Map<java.lang.String, java.lang.String> captions;
 
