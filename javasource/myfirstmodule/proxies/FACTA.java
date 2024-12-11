@@ -4,7 +4,7 @@
 
 package myfirstmodule.proxies;
 
-public class FACTA
+public class FACTA implements com.mendix.systemwideinterfaces.core.IEntityProxy
 {
 	private final com.mendix.systemwideinterfaces.core.IMendixObject fACTAMendixObject;
 
@@ -94,15 +94,6 @@ public class FACTA
 	}
 
 	/**
-	 * @deprecated Use 'FACTA.load(IContext, IMendixIdentifier)' instead.
-	 */
-	@java.lang.Deprecated
-	public static myfirstmodule.proxies.FACTA initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
-	{
-		return myfirstmodule.proxies.FACTA.load(context, mendixIdentifier);
-	}
-
-	/**
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.createSudoClone() can be used to obtain sudo access).
 	 * @param context The context to be used
@@ -129,39 +120,6 @@ public class FACTA
 			.collect(java.util.stream.Collectors.toList());
 	}
 
-	/**
-	 * Commit the changes made on this proxy object.
-	 * @throws com.mendix.core.CoreException
-	 */
-	public final void commit() throws com.mendix.core.CoreException
-	{
-		com.mendix.core.Core.commit(context, getMendixObject());
-	}
-
-	/**
-	 * Commit the changes made on this proxy object using the specified context.
-	 * @throws com.mendix.core.CoreException
-	 */
-	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		com.mendix.core.Core.commit(context, getMendixObject());
-	}
-
-	/**
-	 * Delete the object.
-	 */
-	public final void delete()
-	{
-		com.mendix.core.Core.delete(context, getMendixObject());
-	}
-
-	/**
-	 * Delete the object using the specified context.
-	 */
-	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		com.mendix.core.Core.delete(context, getMendixObject());
-	}
 	/**
 	 * @return value of PAN
 	 */
@@ -307,7 +265,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of Adresstype
+	 * Get value of Adresstype
 	 * @param adresstype
 	 */
 	public final myfirstmodule.proxies.Adresstype2 getAdresstype()
@@ -424,7 +382,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of wealthsource
+	 * Get value of wealthsource
 	 * @param wealthsource
 	 */
 	public final myfirstmodule.proxies.wealthsource getwealthsource()
@@ -469,7 +427,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of incomeslab
+	 * Get value of incomeslab
 	 * @param incomeslab
 	 */
 	public final myfirstmodule.proxies.incomeslab getincomeslab()
@@ -514,7 +472,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of cooperativeservicesector
+	 * Get value of cooperativeservicesector
 	 * @param cooperativeservicesector
 	 */
 	public final myfirstmodule.proxies.servicesector getcooperativeservicesector()
@@ -559,7 +517,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of occupation
+	 * Get value of occupation
 	 * @param occupation
 	 */
 	public final myfirstmodule.proxies.occupation getoccupation()
@@ -604,7 +562,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of occupationtypes
+	 * Get value of occupationtypes
 	 * @param occupationtypes
 	 */
 	public final myfirstmodule.proxies.occupatuiontype getoccupationtypes()
@@ -757,7 +715,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of npoform
+	 * Get value of npoform
 	 * @param npoform
 	 */
 	public final myfirstmodule.proxies.npoform getnpoform()
@@ -802,7 +760,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of npodeclaration
+	 * Get value of npodeclaration
 	 * @param npodeclaration
 	 */
 	public final myfirstmodule.proxies.npodeclaration getnpodeclaration()
@@ -883,7 +841,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of datasource
+	 * Get value of datasource
 	 * @param datasource
 	 */
 	public final myfirstmodule.proxies.datsource getdatasource()
@@ -964,7 +922,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of taxresident
+	 * Get value of taxresident
 	 * @param taxresident
 	 */
 	public final myfirstmodule.proxies.taxresident gettaxresident()
@@ -1009,7 +967,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of countryresidence
+	 * Get value of countryresidence
 	 * @param countryresidence
 	 */
 	public final myfirstmodule.proxies.countryresidence getcountryresidence()
@@ -1054,7 +1012,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of identifydoc
+	 * Get value of identifydoc
 	 * @param identifydoc
 	 */
 	public final myfirstmodule.proxies.iddoc getidentifydoc()
@@ -1135,7 +1093,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of entityexemption
+	 * Get value of entityexemption
 	 * @param entityexemption
 	 */
 	public final myfirstmodule.proxies.entityexemptioncode getentityexemption()
@@ -1180,7 +1138,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of ffi
+	 * Get value of ffi
 	 * @param ffi
 	 */
 	public final myfirstmodule.proxies.ffi getffi()
@@ -1297,7 +1255,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of giinnotapplicable
+	 * Get value of giinnotapplicable
 	 * @param giinnotapplicable
 	 */
 	public final myfirstmodule.proxies.giinapllicable getgiinnotapplicable()
@@ -1342,7 +1300,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of nonfinancial
+	 * Get value of nonfinancial
 	 * @param nonfinancial
 	 */
 	public final myfirstmodule.proxies.nonfinancial getnonfinancial()
@@ -1459,7 +1417,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of natureofrelation
+	 * Get value of natureofrelation
 	 * @param natureofrelation
 	 */
 	public final myfirstmodule.proxies.natureofrelation getnatureofrelation()
@@ -1576,7 +1534,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of subcategory
+	 * Get value of subcategory
 	 * @param subcategory
 	 */
 	public final myfirstmodule.proxies.subcategory getsubcategory()
@@ -1621,7 +1579,7 @@ public class FACTA
 	}
 
 	/**
-	 * Set value of politicllyexposed
+	 * Get value of politicllyexposed
 	 * @param politicllyexposed
 	 */
 	public final myfirstmodule.proxies.politicallyexposed getpoliticllyexposed()
@@ -1773,17 +1731,13 @@ public class FACTA
 		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
 	}
 
-	/**
-	 * @return the IMendixObject instance of this proxy for use in the Core interface.
-	 */
+	@java.lang.Override
 	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
 	{
 		return fACTAMendixObject;
 	}
 
-	/**
-	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
-	 */
+	@java.lang.Override
 	public final com.mendix.systemwideinterfaces.core.IContext getContext()
 	{
 		return context;
@@ -1809,21 +1763,13 @@ public class FACTA
 		return getMendixObject().hashCode();
 	}
 
-	/**
-	 * @return String name of this class
-	 */
+  /**
+   * Gives full name ("Module.Entity" name) of the type of the entity.
+   *
+   * @return the name
+   */
 	public static java.lang.String getType()
 	{
 		return entityName;
-	}
-
-	/**
-	 * @return String GUID from this object, format: ID_0000000000
-	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
-	 */
-	@java.lang.Deprecated
-	public java.lang.String getGUID()
-	{
-		return "ID_" + getMendixObject().getId().toLong();
 	}
 }

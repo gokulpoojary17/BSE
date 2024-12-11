@@ -26785,7 +26785,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .text {
   color: rgb(141, 140, 140);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .wizard-step-text {
@@ -26837,14 +26837,21 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .next-button {
-  margin-top: 10px;
-  margin-left: 60px;
+  margin-left: 200px;
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  color: black;
-  font-weight: 1000;
-  background: linear-gradient(to bottom, yellow, orange);
+  color: rgb(250, 244, 244);
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  background: linear-gradient(to bottom, yellow, rgb(255, 136, 0));
+}
+
+.draft-button {
+  width: 200px;
+  margin-left: 400px;
+  height: 50px;
 }
 
 .member-text {
@@ -26999,6 +27006,64 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .selfdeclare-container {
   display: flex;
+}
+
+.add-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 1000;
+  background: linear-gradient(to bottom, yellow, orange);
+}
+
+.active-container {
+  margin-left: 10px;
+}
+
+.auth-container {
+  margin-left: -100px;
+}
+
+.verify-container {
+  margin-left: -80px;
+}
+
+.approval-container {
+  margin-left: -80px;
+}
+
+.draft-container {
+  margin-left: -100px;
+}
+
+.querry-container {
+  margin-left: -200px;
+}
+
+.inactive-container {
+  margin-left: -100px;
+}
+
+.suspend-container {
+  margin-left: 10px;
+  margin-top: -20px;
+}
+
+.reject-container {
+  margin-left: -100px;
+  margin-top: -20px;
+}
+
+.list-buttons {
+  background-color: none;
+  border: none;
+  color: black;
+}
+
+.list-buttons:hover {
+  background-color: white;
+  border: none;
 }
 
 .topbar-content {

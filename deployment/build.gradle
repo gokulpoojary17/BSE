@@ -50,29 +50,6 @@ class ProtectedModule {
     }
 }
 
-tasks.register("checkDependencies") {
-    description "Check dependencies"
-
-    def packagesArg = jvmRemovedPackages.collect { ["-p", it] }.flatten()
-    def classpath = (publicApiJars + "$mendixProjectDir/$userlibDirName/.*").join(File.pathSeparator)
-
-    def buffer = new ByteArrayOutputStream()
-
-    exec {
-        standardOutput = buffer
-        commandLine = ["java", "-Duser.language=en", "com.sun.tools.jdeps.Main", "-cp", classpath,
-                "--multi-release", "11", "-verbose:class"] + packagesArg + "$deploymentDir/$runDir"
-    }
-
-    def output = new String(buffer.toByteArray())
-    def lines = output.split("\\R")
-
-    if (lines.any { !it.contains("Warning: ") && it.toLowerCase().contains("not found") }) {
-        System.err.println output
-        throw new GradleException("Dependency check failed, most probably some packages and/or classes are not provided.")
-    }
-}
-
 tasks.register('clean', Delete) {
     description 'clean the deployment directory'
     delete modelDir
@@ -110,16 +87,16 @@ unzipDataSnapshot.configure {
     enabled = extractDataSnapshot
 }
 
-tasks.register('copyUserLibs', Copy) {
+tasks.register('copyLibs', Copy) {
     duplicatesStrategy = 'include'
 
     protectedModules.forEach { module ->
         from(module.userlib()) { module.excluded.forEach { exclude(it) } }
     }
 
-    from("$mendixProjectDir/$userlibDirName") {
-        excludedJars.each { f -> exclude f }
-    }
+    from("$mendixProjectDir/$vendorlibDirName")
+    from("$mendixProjectDir/$userlibDirName")
+    excludedJars.each { f -> exclude f }       
     into "$modelDir/$libDirName/$userlibDirName"
 }
 
@@ -132,7 +109,7 @@ tasks.register("copyResources", Copy) {
 tasks.register("deploy") {
     dependsOn("unzipDataSnapshot")
     dependsOn("copyDeploymentArtifacts")
-    dependsOn("copyUserLibs")
+    dependsOn("copyLibs")
     dependsOn("copyResources")
 }
 
@@ -155,11 +132,15 @@ tasks.register("compile", JavaCompile) {
         include("*.jar")
         excludedJars.forEach { exclude(it) }
     }
+    def vendorlibJarFiles = fileTree("$mendixProjectDir/$vendorlibDirName")  {
+        include("*.jar")
+        excludedJars.forEach { exclude(it) }
+    }
 
-    options.annotationProcessorPath = userlibJarFiles
+    options.annotationProcessorPath = userlibJarFiles + vendorlibJarFiles
 
     source = [fileTree("$mendixProjectDir/$javaSourceDirName")] + protectedModulesSources
-    classpath = project.files((publicApiJarFiles + userlibJarFiles + protectedModulesJarFiles).sort())
+    classpath = project.files((publicApiJarFiles + userlibJarFiles + protectedModulesJarFiles + vendorlibJarFiles).sort())
     destinationDirectory.set(project.file("$deploymentDir/$compileTargetDir"))
 }
 

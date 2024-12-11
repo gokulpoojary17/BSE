@@ -14,7 +14,7 @@
 //lable of inputfields
 .text{
     color:rgb(141, 140, 140);
-    font-weight:400;
+    font-weight:500;
 }
 .wizard-step-text{
 color: rgb(160, 160, 160);
@@ -79,14 +79,36 @@ font-weight: 900px;
 }
 
 .next-button{
-    margin-top: 10px;
-    margin-left: 60px;
+    // margin-top: 10px;
+    margin-left: 200px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
-    color: black;
-    font-weight: 1000;
-    background: linear-gradient(to bottom,yellow,orange);
+    color: rgb(250, 244, 244);
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    background: linear-gradient(to bottom,yellow,rgb(255, 136, 0));
+
+}
+
+.draft-button{
+     width: 200px;
+margin-left: 400px;
+    height: 50px;
+
+//       background: white; /* Button background color */
+//   color: #4A4A4A; /* Text color */
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   font-weight: bold;
+//   border: 2px solid transparent; /* Transparent border */
+//   border-radius: 8px; /* Rounded corners */
+//   background-image: linear-gradient(white, white), linear-gradient(90deg, yellow, orange); /* Two backgrounds */
+//   background-origin: border-box; /* Origin for gradient */
+//   background-clip: padding-box, border-box; /* Clip the backgrounds */
+//   cursor: pointer;
+//   text-align: center;
 
 }
 .member-text{

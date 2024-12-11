@@ -4,323 +4,908 @@
 
 package myfirstmodule.proxies.microflows;
 
-import java.util.HashMap;
-import java.util.Map;
 import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
 
-public class Microflows
+public final class Microflows
 {
 	/**
-	 * @deprecated
-	 * The default constructor of the Microflows class should not be used.
-	 * Use the static microflow invocation methods instead.
+	 * Private constructor to prevent instantiation of this class. 
 	 */
-	@java.lang.Deprecated(since = "9.12", forRemoval = true)
-	public Microflows() {}
+	private Microflows() {}
 
 	// These are the microflows for the MyFirstModule module
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aDD_MicroBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.ADD_Micro");
+		return builder;
+	}
+
 	public static void aDD_Micro(IContext context)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		Core.microflowCall("MyFirstModule.ADD_Micro").withParams(params).execute(context);
+		aDD_MicroBuilder().execute(context);
 	}
-	public static void deletefile(IContext context, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aPPROVALBuilder(
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		Core.microflowCall("MyFirstModule.deletefile").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.APPROVAL");
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		return builder;
 	}
-	public static void dRAFT(IContext context, myfirstmodule.proxies.clientdetails _clientdetails, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.holderdetails _holderdetails)
+
+	public static void aPPROVAL(
+		IContext context,
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		Core.microflowCall("MyFirstModule.DRAFT").withParams(params).execute(context);
+		aPPROVALBuilder(
+				_depository1,
+				_uploaddocument,
+				_draft,
+				_holderdetails,
+				_clientdetails,
+				_basicdetails,
+				_fileDocument,
+				_fACTA,
+				_nominations,
+				_bankdetails,
+				_adressdetails
+			)
+			.execute(context);
 	}
-	public static void draftedit(IContext context, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.FACTA _fACTA, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dRAFTBuilder(
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.draftedit").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.DRAFT");
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		return builder;
 	}
-	public static void editpage1(IContext context, myfirstmodule.proxies.draft _draft)
+
+	public static void dRAFT(
+		IContext context,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		Core.microflowCall("MyFirstModule.editpage1").withParams(params).execute(context);
+		dRAFTBuilder(
+				_clientdetails,
+				_fileDocument,
+				_nominations,
+				_fACTA,
+				_adressdetails,
+				_bankdetails,
+				_basicdetails,
+				_holderdetails
+			)
+			.execute(context);
 	}
-	public static void isactive(IContext context, myfirstmodule.proxies.basicdetails _basicdetails)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder isactiveBuilder(
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		Core.microflowCall("MyFirstModule.isactive").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.isactive");
+		builder = builder.withParam("basicdetails", _basicdetails);
+		return builder;
 	}
-	public static void microflow(IContext context, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.depository1 _depository1, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, system.proxies.FileDocument _fileDocument)
+
+	public static void isactive(
+		IContext context,
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		Core.microflowCall("MyFirstModule.Microflow").withParams(params).execute(context);
+		isactiveBuilder(
+				_basicdetails
+			)
+			.execute(context);
 	}
-	public static void microflow_2(IContext context)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showeditpageBuilder(
+		myfirstmodule.proxies.draft _draft
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		Core.microflowCall("MyFirstModule.Microflow_2").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showeditpage");
+		builder = builder.withParam("draft", _draft);
+		return builder;
 	}
-	public static void open_p1(IContext context, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.depository1 _depository1, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, system.proxies.FileDocument _fileDocument)
+
+	public static void showeditpage(
+		IContext context,
+		myfirstmodule.proxies.draft _draft
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		Core.microflowCall("MyFirstModule.Open_p1").withParams(params).execute(context);
+		showeditpageBuilder(
+				_draft
+			)
+			.execute(context);
 	}
-	public static void showeditpage(IContext context, myfirstmodule.proxies.draft _draft)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform1Builder(
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		Core.microflowCall("MyFirstModule.showeditpage").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform1");
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void showform1(IContext context, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform1(
+		IContext context,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform1").withParams(params).execute(context);
+		showform1Builder(
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_bankdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void showform2(IContext context, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform2Builder(
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform2").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform2");
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void showform3(IContext context, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform2(
+		IContext context,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform3").withParams(params).execute(context);
+		showform2Builder(
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_bankdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void showform5(IContext context, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform3Builder(
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform5").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform3");
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void showform6(IContext context, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform3(
+		IContext context,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform6").withParams(params).execute(context);
+		showform3Builder(
+				_basicdetails,
+				_holderdetails,
+				_clientdetails,
+				_bankdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void showform7(IContext context, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.basicdetails _basicdetails, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform5Builder(
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.showform7").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform5");
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void sHOWPAGES(IContext context, myfirstmodule.proxies.draft _draft, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform5(
+		IContext context,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.SHOWPAGES").withParams(params).execute(context);
+		showform5Builder(
+				_bankdetails,
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void step1valid(IContext context, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform6Builder(
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step1valid").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform6");
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void step2valid(IContext context, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform6(
+		IContext context,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step2valid").withParams(params).execute(context);
+		showform6Builder(
+				_adressdetails,
+				_basicdetails,
+				_holderdetails,
+				_clientdetails,
+				_bankdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void step3valid(IContext context, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showform7Builder(
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step3valid").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showform7");
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void step5valid(IContext context, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.FACTA _fACTA, myfirstmodule.proxies.nominations _nominations, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.draft _draft_1, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void showform7(
+		IContext context,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("draft_1", _draft_1 == null ? null : _draft_1.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step5valid").withParams(params).execute(context);
+		showform7Builder(
+				_nominations,
+				_fACTA,
+				_adressdetails,
+				_bankdetails,
+				_clientdetails,
+				_holderdetails,
+				_basicdetails,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
-	public static void step6valid(IContext context, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.FACTA _fACTA, system.proxies.FileDocument _fileDocument, system.proxies.FileDocument _fileDocument_2, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sHOWPAGESBuilder(
+		myfirstmodule.proxies.draft _draft,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("FileDocument_2", _fileDocument_2 == null ? null : _fileDocument_2.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step6valid").withParams(params).execute(context);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.SHOWPAGES");
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
 	}
-	public static void step7valid(IContext context, myfirstmodule.proxies.adressdetails _adressdetails, myfirstmodule.proxies.bankdetails _bankdetails, myfirstmodule.proxies.basicdetails _basicdetails, myfirstmodule.proxies.clientdetails _clientdetails, myfirstmodule.proxies.holderdetails _holderdetails, myfirstmodule.proxies.nominations _nominations, myfirstmodule.proxies.FACTA _fACTA, system.proxies.FileDocument _fileDocument, myfirstmodule.proxies.draft _draft, myfirstmodule.proxies.Uploaddocument _uploaddocument, myfirstmodule.proxies.depository1 _depository1)
+
+	public static void sHOWPAGES(
+		IContext context,
+		myfirstmodule.proxies.draft _draft,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
 	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("adressdetails", _adressdetails == null ? null : _adressdetails.getMendixObject());
-		params.put("bankdetails", _bankdetails == null ? null : _bankdetails.getMendixObject());
-		params.put("basicdetails", _basicdetails == null ? null : _basicdetails.getMendixObject());
-		params.put("clientdetails", _clientdetails == null ? null : _clientdetails.getMendixObject());
-		params.put("holderdetails", _holderdetails == null ? null : _holderdetails.getMendixObject());
-		params.put("nominations", _nominations == null ? null : _nominations.getMendixObject());
-		params.put("FACTA", _fACTA == null ? null : _fACTA.getMendixObject());
-		params.put("FileDocument", _fileDocument == null ? null : _fileDocument.getMendixObject());
-		params.put("draft", _draft == null ? null : _draft.getMendixObject());
-		params.put("Uploaddocument", _uploaddocument == null ? null : _uploaddocument.getMendixObject());
-		params.put("depository1", _depository1 == null ? null : _depository1.getMendixObject());
-		Core.microflowCall("MyFirstModule.step7valid").withParams(params).execute(context);
+		sHOWPAGESBuilder(
+				_draft,
+				_fileDocument,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step1validBuilder(
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step1valid");
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step1valid(
+		IContext context,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step1validBuilder(
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_bankdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step2validBuilder(
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step2valid");
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step2valid(
+		IContext context,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step2validBuilder(
+				_holderdetails,
+				_basicdetails,
+				_bankdetails,
+				_adressdetails,
+				_clientdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step3validBuilder(
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step3valid");
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step3valid(
+		IContext context,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step3validBuilder(
+				_bankdetails,
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_adressdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step5validBuilder(
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.draft _draft_1,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step5valid");
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("draft_1", _draft_1);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step5valid(
+		IContext context,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.nominations _nominations,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.draft _draft_1,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step5validBuilder(
+				_adressdetails,
+				_basicdetails,
+				_holderdetails,
+				_clientdetails,
+				_bankdetails,
+				_fACTA,
+				_nominations,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_draft_1,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step6validBuilder(
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		system.proxies.FileDocument _fileDocument_2,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step6valid");
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("FileDocument_2", _fileDocument_2);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step6valid(
+		IContext context,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		system.proxies.FileDocument _fileDocument_2,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step6validBuilder(
+				_adressdetails,
+				_bankdetails,
+				_clientdetails,
+				_holderdetails,
+				_nominations,
+				_basicdetails,
+				_fACTA,
+				_fileDocument,
+				_fileDocument_2,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step7validBuilder(
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.step7valid");
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("depository1", _depository1);
+		return builder;
+	}
+
+	public static void step7valid(
+		IContext context,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.depository1 _depository1
+	)
+	{
+		step7validBuilder(
+				_adressdetails,
+				_bankdetails,
+				_basicdetails,
+				_clientdetails,
+				_holderdetails,
+				_nominations,
+				_fACTA,
+				_fileDocument,
+				_draft,
+				_uploaddocument,
+				_depository1
+			)
+			.execute(context);
 	}
 }

@@ -1,6 +1,6 @@
 ext {
-	mendixJavaVersion = 11
-	mendixInstallDir = "C:/Program Files/Mendix/9.24.28.46946"
+	mendixJavaVersion = 21
+	mendixInstallDir = "C:/Program Files/Mendix/10.15.0.46408"
 	projectName = "bse"
 	projectSafeName = "bse_main"
 	mendixProjectDir = "C:/Users/Admin/Mendix/bse-main"
@@ -8,7 +8,7 @@ ext {
 	dataSnapshotFile = "C:/Users/Admin/Mendix/bse-main/data-snapshot.zip"
 	dataDir = "C:/Users/Admin/Mendix/bse-main/deployment/data"
 	extractDataSnapshot = false
-	templatesDir = "C:/Program Files/Mendix/9.24.28.46946/modeler/runtemplates"
+	templatesDir = "C:/Program Files/Mendix/10.15.0.46408/modeler/runtemplates"
 	runDir = "run"
 	compileTargetDir = "run/bin"
 	deploymentDirName = "deployment"
@@ -17,6 +17,7 @@ ext {
 	javaSourceDirName = "javasource"
 	libDirName = "lib"
 	userlibDirName = "userlib"
+	vendorlibDirName = "vendorlib"
 	generateFullDebugInfo = false
 	excludedRunTemplatesFiles = [
 		"**/*.template"

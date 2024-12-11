@@ -1,8 +1,14 @@
 Initialized native services in: C:\Users\Admin\.gradle\native
 Initialized jansi services in: C:\Users\Admin\.gradle\native
-Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot, JAVA_VERSION=11.0.20.1, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=11.0.20.1+1, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=11.0.20.1+1, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
-The client will now receive all logging from the daemon (pid: 30280). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-30280.out.log
-Starting 2nd build in daemon [uptime: 9.729 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 11% of 384 MiB]
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot, JAVA_VERSION=21.0.2, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.2+13-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.2+13-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+Found daemon DaemonInfo{pid=10508, address=[e95a16d4-25a1-44db-bc83-ce143324be00 port:60155, addresses:[/127.0.0.1]], state=Idle, lastBusy=1733906629797, context=DefaultDaemonContext[uid=d8758ad7-c2a0-4d42-9930-ab99d017af53,javaHome=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=10508,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=9944,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=d8758ad7-c2a0-4d42-9930-ab99d017af53,javaHome=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=10508,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 23140). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-23140.out.log
+Starting 8th build in daemon [uptime: 58 mins 35.668 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 17% of 384 MiB]
 Using 8 worker leases.
 Now considering [C:\Users\Admin\Mendix\bse-main\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
@@ -16,6 +22,7 @@ Included projects: [root project 'deployment']
 Evaluating root project 'deployment' using build file 'C:\Users\Admin\Mendix\bse-main\deployment\build.gradle'.
 All projects evaluated.
 Task name matched 'clean-custom-classes'
+file or directory 'C:\Users\Admin\Mendix\bse-main\vendorlib', not found
 Task name matched 'compile'
 Task name matched 'package'
 Selected primary task 'clean-custom-classes' from project :
@@ -23,18 +30,18 @@ Selected primary task 'compile' from project :
 Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
-Resolve mutations for :clean-custom-classes (Thread[Execution worker,5,main]) started.
-:clean-custom-classes (Thread[Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[included builds,5,main]) started.
-destroyer locations for task group 1 (Thread[included builds,5,main]) started.
+Resolve mutations for :clean-custom-classes (Thread[#237,Execution worker,5,main]) started.
+:clean-custom-classes (Thread[#237,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#236,included builds,5,main]) started.
+destroyer locations for task group 1 (Thread[#236,included builds,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[Execution worker,5,main]) started.
-:compile (Thread[Execution worker,5,main]) started.
+Resolve mutations for :compile (Thread[#237,Execution worker,5,main]) started.
+:compile (Thread[#237,Execution worker,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -49,25 +56,27 @@ Task ':compile' is not up-to-date because:
   Output property 'destinationDirectory' file C:\Users\Admin\Mendix\bse-main\deployment\run\bin\webactions has been removed.
 The input changes require a full rebuild for incremental task ':compile'.
 Not watching anything anymore
+file or directory 'C:\Users\Admin\Mendix\bse-main\vendorlib', not found
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
-Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot'.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.203 secs.
-Created classpath snapshot for incremental compilation in 0.019 secs.
-Resolve mutations for :package (Thread[Execution worker,5,main]) started.
-:package (Thread[Execution worker Thread 3,5,main]) started.
+Class dependency analysis for incremental compilation took 0.055 secs.
+Created classpath snapshot for incremental compilation in 0.002 secs.
+Resolve mutations for :package (Thread[#237,Execution worker,5,main]) started.
+:package (Thread[#237,Execution worker,5,main]) started.
 
-> Task :package
+> Task :package UP-TO-DATE
 Caching disabled for task ':package' because:
   Build cache is disabled
-Task ':package' is not up-to-date because:
-  Input property 'rootSpec$1$1' file C:\Users\Admin\Mendix\bse-main\deployment\run\bin\myfirstmodule\proxies\microflows\Microflows.class has changed.
+Skipping task ':package' as it is up-to-date.
 
-BUILD SUCCESSFUL in 5s
-3 actionable tasks: 3 executed
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 2 executed, 1 up-to-date
 Watched directory hierarchies: [C:\Users\Admin\Mendix\bse-main\deployment]
 
 
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
+Note: C:\Users\Admin\Mendix\bse-main\javasource\administration\proxies\microflows\Microflows.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
 

@@ -1,0 +1,74 @@
+@import './custom-variables';
+
+.add-button{
+
+    // margin-top: 10px;
+    // margin-left: 60px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 1000;
+    background: linear-gradient(to bottom,yellow,orange);
+
+
+}
+.active-container{
+    margin-left: 10px;
+}
+
+.auth-container{
+margin-left: -100px;
+}
+
+.verify-container{
+margin-left: -80px;
+
+
+}
+.approval-container{
+margin-left: -80px;
+
+}
+
+.draft-container{
+margin-left: -100px;
+
+}
+
+.querry-container{
+margin-left: -200px;
+
+}
+
+
+.inactive-container{
+margin-left: -100px;
+// margin-top: -40px;
+
+
+}
+
+.suspend-container{
+margin-left: 10px;
+margin-top: -20px;
+
+}
+
+.reject-container{
+margin-left: -100px;
+margin-top: -20px;
+
+}
+
+.list-buttons{
+background-color: none;
+border: none;
+color: black;
+}
+ 
+.list-buttons:hover{
+    background-color:white;
+    border: none;
+
+}
