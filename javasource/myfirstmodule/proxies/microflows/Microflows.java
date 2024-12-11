@@ -908,4 +908,47 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder testingBuilder(
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.testing");
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("FACTA", _fACTA);
+		return builder;
+	}
+
+	public static void testing(
+		IContext context,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA
+	)
+	{
+		testingBuilder(
+				_draft,
+				_depository1,
+				_fileDocument,
+				_nominations,
+				_holderdetails,
+				_uploaddocument,
+				_fACTA
+			)
+			.execute(context);
+	}
 }
