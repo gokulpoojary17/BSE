@@ -1,14 +1,8 @@
 Initialized native services in: C:\Users\Admin\.gradle\native
 Initialized jansi services in: C:\Users\Admin\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot, JAVA_VERSION=21.0.2, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.2+13-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.2+13-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
-Found daemon DaemonInfo{pid=10508, address=[e95a16d4-25a1-44db-bc83-ce143324be00 port:60155, addresses:[/127.0.0.1]], state=Idle, lastBusy=1733906629797, context=DefaultDaemonContext[uid=d8758ad7-c2a0-4d42-9930-ab99d017af53,javaHome=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=10508,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
-Java home is different.
-Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=26740,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
-Actual: DefaultDaemonContext[uid=d8758ad7-c2a0-4d42-9930-ab99d017af53,javaHome=C:\Program Files\Eclipse Adoptium\jdk-11.0.20.101-hotspot,daemonRegistryDir=C:\Users\Admin\.gradle\daemon,pid=10508,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=US,-Duser.language=en,-Duser.variant]
-
-  Looking for a different daemon...
-The client will now receive all logging from the daemon (pid: 23140). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-23140.out.log
-Starting 10th build in daemon [uptime: 2 hrs 25 mins 55.257 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 17% of 384 MiB]
+The client will now receive all logging from the daemon (pid: 18460). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-18460.out.log
+Starting 12th build in daemon [uptime: 2 hrs 53 mins 0.035 secs, performance: 97%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 15% of 384 MiB]
 Using 8 worker leases.
 Now considering [C:\Users\Admin\Mendix\bse-main\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
@@ -30,18 +24,18 @@ Selected primary task 'compile' from project :
 Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
-Resolve mutations for :clean-custom-classes (Thread[#287,Execution worker,5,main]) started.
-:clean-custom-classes (Thread[#287,Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[#286,included builds,5,main]) started.
-destroyer locations for task group 1 (Thread[#290,Execution worker Thread 4,5,main]) started.
+Resolve mutations for :clean-custom-classes (Thread[#332,Execution worker,5,main]) started.
+:clean-custom-classes (Thread[#332,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#331,included builds,5,main]) started.
+destroyer locations for task group 1 (Thread[#331,included builds,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[#287,Execution worker,5,main]) started.
-:compile (Thread[#287,Execution worker,5,main]) started.
+Resolve mutations for :compile (Thread[#332,Execution worker,5,main]) started.
+:compile (Thread[#332,Execution worker,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -60,10 +54,10 @@ file or directory 'C:\Users\Admin\Mendix\bse-main\vendorlib', not found
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.066 secs.
+Class dependency analysis for incremental compilation took 0.052 secs.
 Created classpath snapshot for incremental compilation in 0.001 secs.
-Resolve mutations for :package (Thread[#287,Execution worker,5,main]) started.
-:package (Thread[#287,Execution worker,5,main]) started.
+Resolve mutations for :package (Thread[#332,Execution worker,5,main]) started.
+:package (Thread[#332,Execution worker,5,main]) started.
 
 > Task :package
 Caching disabled for task ':package' because:

@@ -34,7 +34,18 @@ box-shadow: 0 6px  0  rgba(0, 0, 0, 0.1); /* Shadow only below */
 .logo-container{
     margin-top: -10px;
 }
+.fixed-container{
+    // position:fixed ;
+    // margin-top: 00px;
+}
+.editpage-lable{
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: 900;
+   background: linear-gradient(to bottom,rgb(255, 187, 0),rgb(255, 136, 0));
+   color: white;
 
+}
 
 //basic details which is displayed in every page 
 .details-container{

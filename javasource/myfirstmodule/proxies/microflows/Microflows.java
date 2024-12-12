@@ -15,16 +15,6 @@ public final class Microflows
 	private Microflows() {}
 
 	// These are the microflows for the MyFirstModule module
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aDD_MicroBuilder()
-	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.ADD_Micro");
-		return builder;
-	}
-
-	public static void aDD_Micro(IContext context)
-	{
-		aDD_MicroBuilder().execute(context);
-	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder aPPROVALBuilder(
 		myfirstmodule.proxies.depository1 _depository1,
 		myfirstmodule.proxies.Uploaddocument _uploaddocument,
@@ -84,50 +74,34 @@ public final class Microflows
 			)
 			.execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder dRAFTBuilder(
-		myfirstmodule.proxies.clientdetails _clientdetails,
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder eDITDRAFTS_MICROBuilder(
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
 		system.proxies.FileDocument _fileDocument,
-		myfirstmodule.proxies.nominations _nominations,
-		myfirstmodule.proxies.FACTA _fACTA,
-		myfirstmodule.proxies.adressdetails _adressdetails,
-		myfirstmodule.proxies.bankdetails _bankdetails,
-		myfirstmodule.proxies.basicdetails _basicdetails,
-		myfirstmodule.proxies.holderdetails _holderdetails
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
 	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.DRAFT");
-		builder = builder.withParam("clientdetails", _clientdetails);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.EDITDRAFTS_MICRO");
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("depository1", _depository1);
 		builder = builder.withParam("FileDocument", _fileDocument);
-		builder = builder.withParam("nominations", _nominations);
-		builder = builder.withParam("FACTA", _fACTA);
-		builder = builder.withParam("adressdetails", _adressdetails);
-		builder = builder.withParam("bankdetails", _bankdetails);
-		builder = builder.withParam("basicdetails", _basicdetails);
-		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
 		return builder;
 	}
 
-	public static void dRAFT(
+	public static void eDITDRAFTS_MICRO(
 		IContext context,
-		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
 		system.proxies.FileDocument _fileDocument,
-		myfirstmodule.proxies.nominations _nominations,
-		myfirstmodule.proxies.FACTA _fACTA,
-		myfirstmodule.proxies.adressdetails _adressdetails,
-		myfirstmodule.proxies.bankdetails _bankdetails,
-		myfirstmodule.proxies.basicdetails _basicdetails,
-		myfirstmodule.proxies.holderdetails _holderdetails
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
 	)
 	{
-		dRAFTBuilder(
-				_clientdetails,
+		eDITDRAFTS_MICROBuilder(
+				_draft,
+				_depository1,
 				_fileDocument,
-				_nominations,
-				_fACTA,
-				_adressdetails,
-				_bankdetails,
-				_basicdetails,
-				_holderdetails
+				_uploaddocument
 			)
 			.execute(context);
 	}
@@ -150,22 +124,122 @@ public final class Microflows
 			)
 			.execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showeditpageBuilder(
-		myfirstmodule.proxies.draft _draft
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sAVEDRAFT_MICROBuilder(
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails
 	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showeditpage");
-		builder = builder.withParam("draft", _draft);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.SAVEDRAFT_MICRO");
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
 		return builder;
 	}
 
-	public static void showeditpage(
+	public static void sAVEDRAFT_MICRO(
 		IContext context,
-		myfirstmodule.proxies.draft _draft
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails
 	)
 	{
-		showeditpageBuilder(
-				_draft
+		sAVEDRAFT_MICROBuilder(
+				_clientdetails,
+				_fileDocument,
+				_nominations,
+				_fACTA,
+				_adressdetails,
+				_bankdetails,
+				_basicdetails,
+				_holderdetails
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sHOW_UCCLISTBuilder()
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.SHOW_UCCLIST");
+		return builder;
+	}
+
+	public static void sHOW_UCCLIST(IContext context)
+	{
+		sHOW_UCCLISTBuilder().execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sHOW_VERIFY_OR_NOTBuilder(
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.SHOW_VERIFY_OR_NOT");
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		return builder;
+	}
+
+	public static void sHOW_VERIFY_OR_NOT(
+		IContext context,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
+	)
+	{
+		sHOW_VERIFY_OR_NOTBuilder(
+				_draft,
+				_depository1,
+				_fileDocument,
+				_uploaddocument
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder sHOWAPROVE_OR_NOTBuilder(
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.SHOWAPROVE_OR_NOT");
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		return builder;
+	}
+
+	public static void sHOWAPROVE_OR_NOT(
+		IContext context,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.depository1 _depository1,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument
+	)
+	{
+		sHOWAPROVE_OR_NOTBuilder(
+				_draft,
+				_depository1,
+				_fileDocument,
+				_uploaddocument
 			)
 			.execute(context);
 	}
@@ -546,6 +620,124 @@ public final class Microflows
 			)
 			.execute(context);
 	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showPending_To_verifyBuilder(
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.ShowPending_To_verify");
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		return builder;
+	}
+
+	public static void showPending_To_verify(
+		IContext context,
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
+	{
+		showPending_To_verifyBuilder(
+				_depository1,
+				_draft,
+				_uploaddocument,
+				_fACTA,
+				_fileDocument,
+				_nominations,
+				_adressdetails,
+				_bankdetails,
+				_holderdetails,
+				_clientdetails,
+				_basicdetails
+			)
+			.execute(context);
+	}
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder showPendingApprovalPAGEBuilder(
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
+	{
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.showPendingApprovalPAGE");
+		builder = builder.withParam("depository1", _depository1);
+		builder = builder.withParam("draft", _draft);
+		builder = builder.withParam("Uploaddocument", _uploaddocument);
+		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("FileDocument", _fileDocument);
+		builder = builder.withParam("nominations", _nominations);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("clientdetails", _clientdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		return builder;
+	}
+
+	public static void showPendingApprovalPAGE(
+		IContext context,
+		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.draft _draft,
+		myfirstmodule.proxies.Uploaddocument _uploaddocument,
+		myfirstmodule.proxies.FACTA _fACTA,
+		system.proxies.FileDocument _fileDocument,
+		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.clientdetails _clientdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails
+	)
+	{
+		showPendingApprovalPAGEBuilder(
+				_depository1,
+				_draft,
+				_uploaddocument,
+				_fACTA,
+				_fileDocument,
+				_nominations,
+				_adressdetails,
+				_bankdetails,
+				_holderdetails,
+				_clientdetails,
+				_basicdetails
+			)
+			.execute(context);
+	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder step1validBuilder(
 		myfirstmodule.proxies.basicdetails _basicdetails,
 		myfirstmodule.proxies.clientdetails _clientdetails,
@@ -908,46 +1100,54 @@ public final class Microflows
 			)
 			.execute(context);
 	}
-	public static com.mendix.core.actionmanagement.MicroflowCallBuilder testingBuilder(
-		myfirstmodule.proxies.draft _draft,
-		myfirstmodule.proxies.depository1 _depository1,
+	public static com.mendix.core.actionmanagement.MicroflowCallBuilder vERIFY_FORMBuilder(
+		myfirstmodule.proxies.clientdetails _clientdetails,
 		system.proxies.FileDocument _fileDocument,
 		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
 		myfirstmodule.proxies.holderdetails _holderdetails,
-		myfirstmodule.proxies.Uploaddocument _uploaddocument,
-		myfirstmodule.proxies.FACTA _fACTA
+		myfirstmodule.proxies.draft _draft
 	)
 	{
-		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.testing");
-		builder = builder.withParam("draft", _draft);
-		builder = builder.withParam("depository1", _depository1);
+		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.VERIFY_FORM");
+		builder = builder.withParam("clientdetails", _clientdetails);
 		builder = builder.withParam("FileDocument", _fileDocument);
 		builder = builder.withParam("nominations", _nominations);
-		builder = builder.withParam("holderdetails", _holderdetails);
-		builder = builder.withParam("Uploaddocument", _uploaddocument);
 		builder = builder.withParam("FACTA", _fACTA);
+		builder = builder.withParam("adressdetails", _adressdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
+		builder = builder.withParam("basicdetails", _basicdetails);
+		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("draft", _draft);
 		return builder;
 	}
 
-	public static void testing(
+	public static void vERIFY_FORM(
 		IContext context,
-		myfirstmodule.proxies.draft _draft,
-		myfirstmodule.proxies.depository1 _depository1,
+		myfirstmodule.proxies.clientdetails _clientdetails,
 		system.proxies.FileDocument _fileDocument,
 		myfirstmodule.proxies.nominations _nominations,
+		myfirstmodule.proxies.FACTA _fACTA,
+		myfirstmodule.proxies.adressdetails _adressdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails,
+		myfirstmodule.proxies.basicdetails _basicdetails,
 		myfirstmodule.proxies.holderdetails _holderdetails,
-		myfirstmodule.proxies.Uploaddocument _uploaddocument,
-		myfirstmodule.proxies.FACTA _fACTA
+		myfirstmodule.proxies.draft _draft
 	)
 	{
-		testingBuilder(
-				_draft,
-				_depository1,
+		vERIFY_FORMBuilder(
+				_clientdetails,
 				_fileDocument,
 				_nominations,
+				_fACTA,
+				_adressdetails,
+				_bankdetails,
+				_basicdetails,
 				_holderdetails,
-				_uploaddocument,
-				_fACTA
+				_draft
 			)
 			.execute(context);
 	}
