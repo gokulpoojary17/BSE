@@ -28,7 +28,8 @@ public class bankdetails implements com.mendix.systemwideinterfaces.core.IEntity
 		ifsc("ifsc"),
 		bankcity("bankcity"),
 		step3completed("step3completed"),
-		dataid("dataid");
+		dataid("dataid"),
+		bankdetails_bank("MyFirstModule.bankdetails_bank");
 
 		private final java.lang.String metaName;
 
@@ -429,6 +430,53 @@ public class bankdetails implements com.mendix.systemwideinterfaces.core.IEntity
 	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer dataid)
 	{
 		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of bankdetails_bank
+	 */
+	public final myfirstmodule.proxies.bank getbankdetails_bank() throws com.mendix.core.CoreException
+	{
+		return getbankdetails_bank(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of bankdetails_bank
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final myfirstmodule.proxies.bank getbankdetails_bank(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		myfirstmodule.proxies.bank result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.bankdetails_bank.toString());
+		if (identifier != null) {
+			result = myfirstmodule.proxies.bank.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of bankdetails_bank
+	 * @param bankdetails_bank
+	 */
+	public final void setbankdetails_bank(myfirstmodule.proxies.bank bankdetails_bank)
+	{
+		setbankdetails_bank(getContext(), bankdetails_bank);
+	}
+
+	/**
+	 * Set value of bankdetails_bank
+	 * @param context
+	 * @param bankdetails_bank
+	 */
+	public final void setbankdetails_bank(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.bank bankdetails_bank)
+	{
+		if (bankdetails_bank == null) {
+			getMendixObject().setValue(context, MemberNames.bankdetails_bank.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.bankdetails_bank.toString(), bankdetails_bank.getMendixObject().getId());
+		}
 	}
 
 	@java.lang.Override

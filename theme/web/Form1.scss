@@ -84,7 +84,7 @@ font-weight: 900px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid black;
+    // border: 1px solid black;
     color: rgb(250, 244, 244);
     font-weight: 900;
     font-size: 16px;
@@ -98,18 +98,18 @@ font-weight: 900px;
 margin-left: 400px;
     height: 50px;
 
-//       background: white; /* Button background color */
-//   color: #4A4A4A; /* Text color */
-//   padding: 10px 20px;
-//   font-size: 16px;
-//   font-weight: bold;
-//   border: 2px solid transparent; /* Transparent border */
-//   border-radius: 8px; /* Rounded corners */
-//   background-image: linear-gradient(white, white), linear-gradient(90deg, yellow, orange); /* Two backgrounds */
-//   background-origin: border-box; /* Origin for gradient */
-//   background-clip: padding-box, border-box; /* Clip the backgrounds */
-//   cursor: pointer;
-//   text-align: center;
+      background: white; /* Button background color */
+  color: #4A4A4A; /* Text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 8px; /* Rounded corners */
+  background-image: linear-gradient(white, white), linear-gradient(90deg, yellow, orange); /* Two backgrounds */
+  background-origin: border-box; /* Origin for gradient */
+  background-clip: padding-box, border-box; /* Clip the backgrounds */
+  cursor: pointer;
+  text-align: center;
 
 }
 .member-text{

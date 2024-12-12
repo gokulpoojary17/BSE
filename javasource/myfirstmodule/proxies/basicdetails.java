@@ -27,7 +27,8 @@ public class basicdetails implements com.mendix.systemwideinterfaces.core.IEntit
 		step1completed("step1completed"),
 		isactive("isactive"),
 		Branchname("Branchname"),
-		dataid("dataid");
+		dataid("dataid"),
+		basicdetails_Member("MyFirstModule.basicdetails_Member");
 
 		private final java.lang.String metaName;
 
@@ -383,6 +384,53 @@ public class basicdetails implements com.mendix.systemwideinterfaces.core.IEntit
 	public final void setdataid(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long dataid)
 	{
 		getMendixObject().setValue(context, MemberNames.dataid.toString(), dataid);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of basicdetails_Member
+	 */
+	public final myfirstmodule.proxies.Member getbasicdetails_Member() throws com.mendix.core.CoreException
+	{
+		return getbasicdetails_Member(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of basicdetails_Member
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final myfirstmodule.proxies.Member getbasicdetails_Member(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		myfirstmodule.proxies.Member result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.basicdetails_Member.toString());
+		if (identifier != null) {
+			result = myfirstmodule.proxies.Member.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of basicdetails_Member
+	 * @param basicdetails_member
+	 */
+	public final void setbasicdetails_Member(myfirstmodule.proxies.Member basicdetails_member)
+	{
+		setbasicdetails_Member(getContext(), basicdetails_member);
+	}
+
+	/**
+	 * Set value of basicdetails_Member
+	 * @param context
+	 * @param basicdetails_member
+	 */
+	public final void setbasicdetails_Member(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.Member basicdetails_member)
+	{
+		if (basicdetails_member == null) {
+			getMendixObject().setValue(context, MemberNames.basicdetails_Member.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.basicdetails_Member.toString(), basicdetails_member.getMendixObject().getId());
+		}
 	}
 
 	@java.lang.Override
