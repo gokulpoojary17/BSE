@@ -26784,8 +26784,8 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .text {
-  color: rgb(141, 140, 140);
-  font-weight: 500;
+  color: rgb(7, 7, 7);
+  font-weight: 900;
 }
 
 .wizard-step-text {
@@ -27025,6 +27025,60 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .selfdeclare-container {
   display: flex;
+}
+
+.star-container {
+  margin-left: 80px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starcountry-container {
+  margin-left: 290px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starwealth-container {
+  margin-left: 100px;
+  margin-top: -40px;
+  color: red;
+}
+
+.starcooperate-container {
+  margin-left: 160px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starnpo-container {
+  margin-left: 120px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starentity-container {
+  margin-left: 170px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starcountryres-container {
+  margin-left: 150px;
+  margin-top: -20px;
+  color: red;
+}
+
+.starpolitical-container {
+  margin-left: 130px;
+  margin-top: -20px;
+  color: red;
+}
+
+.stardeclare-container {
+  margin-left: 110px;
+  margin-top: -20px;
+  color: red;
 }
 
 .add-button {

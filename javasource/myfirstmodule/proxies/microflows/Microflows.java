@@ -1444,7 +1444,7 @@ public final class Microflows
 		return builder;
 	}
 
-	public static void step7valid(
+	public static boolean step7valid(
 		IContext context,
 		myfirstmodule.proxies.adressdetails _adressdetails,
 		myfirstmodule.proxies.bankdetails _bankdetails,
@@ -1459,7 +1459,7 @@ public final class Microflows
 		myfirstmodule.proxies.depository1 _depository1
 	)
 	{
-		step7validBuilder(
+		Object result = step7validBuilder(
 				_adressdetails,
 				_bankdetails,
 				_basicdetails,
@@ -1473,6 +1473,7 @@ public final class Microflows
 				_depository1
 			)
 			.execute(context);
+		return (boolean) result;
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder toUpperCase_MicroflowBuilder(
 		myfirstmodule.proxies.holderdetails _holderdetails
