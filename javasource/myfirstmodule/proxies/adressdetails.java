@@ -395,7 +395,7 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	/**
 	 * @return value of residencephone
 	 */
-	public final java.lang.String getresidencephone()
+	public final java.lang.Long getresidencephone()
 	{
 		return getresidencephone(getContext());
 	}
@@ -404,16 +404,16 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @return value of residencephone
 	 */
-	public final java.lang.String getresidencephone(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Long getresidencephone(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.residencephone.toString());
+		return (java.lang.Long) getMendixObject().getValue(context, MemberNames.residencephone.toString());
 	}
 
 	/**
 	 * Set value of residencephone
 	 * @param residencephone
 	 */
-	public final void setresidencephone(java.lang.String residencephone)
+	public final void setresidencephone(java.lang.Long residencephone)
 	{
 		setresidencephone(getContext(), residencephone);
 	}
@@ -423,7 +423,7 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @param residencephone
 	 */
-	public final void setresidencephone(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String residencephone)
+	public final void setresidencephone(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long residencephone)
 	{
 		getMendixObject().setValue(context, MemberNames.residencephone.toString(), residencephone);
 	}
@@ -467,7 +467,7 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	/**
 	 * @return value of officephone
 	 */
-	public final java.lang.String getofficephone()
+	public final java.lang.Long getofficephone()
 	{
 		return getofficephone(getContext());
 	}
@@ -476,16 +476,16 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @return value of officephone
 	 */
-	public final java.lang.String getofficephone(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Long getofficephone(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.officephone.toString());
+		return (java.lang.Long) getMendixObject().getValue(context, MemberNames.officephone.toString());
 	}
 
 	/**
 	 * Set value of officephone
 	 * @param officephone
 	 */
-	public final void setofficephone(java.lang.String officephone)
+	public final void setofficephone(java.lang.Long officephone)
 	{
 		setofficephone(getContext(), officephone);
 	}
@@ -495,7 +495,7 @@ public class adressdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @param officephone
 	 */
-	public final void setofficephone(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String officephone)
+	public final void setofficephone(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long officephone)
 	{
 		getMendixObject().setValue(context, MemberNames.officephone.toString(), officephone);
 	}

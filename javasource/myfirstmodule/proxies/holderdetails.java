@@ -380,7 +380,7 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	/**
 	 * @return value of mobilenumber
 	 */
-	public final java.lang.Integer getmobilenumber()
+	public final java.lang.Long getmobilenumber()
 	{
 		return getmobilenumber(getContext());
 	}
@@ -389,16 +389,16 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @return value of mobilenumber
 	 */
-	public final java.lang.Integer getmobilenumber(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Long getmobilenumber(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.mobilenumber.toString());
+		return (java.lang.Long) getMendixObject().getValue(context, MemberNames.mobilenumber.toString());
 	}
 
 	/**
 	 * Set value of mobilenumber
 	 * @param mobilenumber
 	 */
-	public final void setmobilenumber(java.lang.Integer mobilenumber)
+	public final void setmobilenumber(java.lang.Long mobilenumber)
 	{
 		setmobilenumber(getContext(), mobilenumber);
 	}
@@ -408,15 +408,16 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @param mobilenumber
 	 */
-	public final void setmobilenumber(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer mobilenumber)
+	public final void setmobilenumber(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long mobilenumber)
 	{
 		getMendixObject().setValue(context, MemberNames.mobilenumber.toString(), mobilenumber);
 	}
 
 	/**
-	 * @return value of mobiledeclaration
+	 * Get value of mobiledeclaration
+	 * @param mobiledeclaration
 	 */
-	public final java.lang.String getmobiledeclaration()
+	public final myfirstmodule.proxies.emaildeclare getmobiledeclaration()
 	{
 		return getmobiledeclaration(getContext());
 	}
@@ -425,16 +426,20 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @return value of mobiledeclaration
 	 */
-	public final java.lang.String getmobiledeclaration(com.mendix.systemwideinterfaces.core.IContext context)
+	public final myfirstmodule.proxies.emaildeclare getmobiledeclaration(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.mobiledeclaration.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.mobiledeclaration.toString());
+		if (obj == null) {
+			return null;
+		}
+		return myfirstmodule.proxies.emaildeclare.valueOf((java.lang.String) obj);
 	}
 
 	/**
 	 * Set value of mobiledeclaration
 	 * @param mobiledeclaration
 	 */
-	public final void setmobiledeclaration(java.lang.String mobiledeclaration)
+	public final void setmobiledeclaration(myfirstmodule.proxies.emaildeclare mobiledeclaration)
 	{
 		setmobiledeclaration(getContext(), mobiledeclaration);
 	}
@@ -444,9 +449,13 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @param mobiledeclaration
 	 */
-	public final void setmobiledeclaration(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String mobiledeclaration)
+	public final void setmobiledeclaration(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.emaildeclare mobiledeclaration)
 	{
-		getMendixObject().setValue(context, MemberNames.mobiledeclaration.toString(), mobiledeclaration);
+		if (mobiledeclaration != null) {
+			getMendixObject().setValue(context, MemberNames.mobiledeclaration.toString(), mobiledeclaration.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.mobiledeclaration.toString(), null);
+		}
 	}
 
 	/**
@@ -486,9 +495,10 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	}
 
 	/**
-	 * @return value of emaildeclaration
+	 * Get value of emaildeclaration
+	 * @param emaildeclaration
 	 */
-	public final java.lang.String getemaildeclaration()
+	public final myfirstmodule.proxies.emaildeclare getemaildeclaration()
 	{
 		return getemaildeclaration(getContext());
 	}
@@ -497,16 +507,20 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @return value of emaildeclaration
 	 */
-	public final java.lang.String getemaildeclaration(com.mendix.systemwideinterfaces.core.IContext context)
+	public final myfirstmodule.proxies.emaildeclare getemaildeclaration(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.emaildeclaration.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.emaildeclaration.toString());
+		if (obj == null) {
+			return null;
+		}
+		return myfirstmodule.proxies.emaildeclare.valueOf((java.lang.String) obj);
 	}
 
 	/**
 	 * Set value of emaildeclaration
 	 * @param emaildeclaration
 	 */
-	public final void setemaildeclaration(java.lang.String emaildeclaration)
+	public final void setemaildeclaration(myfirstmodule.proxies.emaildeclare emaildeclaration)
 	{
 		setemaildeclaration(getContext(), emaildeclaration);
 	}
@@ -516,9 +530,13 @@ public class holderdetails implements com.mendix.systemwideinterfaces.core.IEnti
 	 * @param context
 	 * @param emaildeclaration
 	 */
-	public final void setemaildeclaration(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String emaildeclaration)
+	public final void setemaildeclaration(com.mendix.systemwideinterfaces.core.IContext context, myfirstmodule.proxies.emaildeclare emaildeclaration)
 	{
-		getMendixObject().setValue(context, MemberNames.emaildeclaration.toString(), emaildeclaration);
+		if (emaildeclaration != null) {
+			getMendixObject().setValue(context, MemberNames.emaildeclaration.toString(), emaildeclaration.toString());
+		} else {
+			getMendixObject().setValue(context, MemberNames.emaildeclaration.toString(), null);
+		}
 	}
 
 	/**
