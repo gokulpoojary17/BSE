@@ -2,9 +2,9 @@ Initialized native services in: C:\Users\Admin\.gradle\native
 Initialized jansi services in: C:\Users\Admin\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot, JAVA_VERSION=21.0.2, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.2+13-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.2+13-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 13332). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-13332.out.log
-Starting 49th build in daemon [uptime: 4 hrs 17 mins 44.641 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 16% of 384 MiB]
+Starting 60th build in daemon [uptime: 6 hrs 24 mins 55.168 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 17% of 384 MiB]
 Using 8 worker leases.
-Now considering [C:\Users\Admin\Mendix\bse-main\deployment] as hierarchies to watch
+Now considering [C:\Users\Admin\Mendix\bse-main\deployment, C:\Users\Admin\Mendix\demo-main_2\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
 File system watching is active
 Starting Build
@@ -21,54 +21,47 @@ Selected primary task 'clean-excluded-jars' from project :
 Selected primary task 'deploy' from project :
 Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifacts', task ':copyLibs', task ':copyResources', task ':unzipDataSnapshot', task ':deploy']
 Tasks that were excluded: []
-Resolve mutations for :clean-excluded-jars (Thread[#1237,Execution worker,5,main]) started.
-:clean-excluded-jars (Thread[#1237,Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[#1236,included builds,5,main]) started.
+Resolve mutations for :clean-excluded-jars (Thread[#1512,Execution worker,5,main]) started.
+:clean-excluded-jars (Thread[#1512,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#1511,included builds,5,main]) started.
 
 > Task :clean-excluded-jars UP-TO-DATE
 Caching disabled for task ':clean-excluded-jars' because:
   Build cache is disabled
 Task ':clean-excluded-jars' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :copyDeploymentArtifacts (Thread[#1237,Execution worker,5,main]) started.
-:copyDeploymentArtifacts (Thread[#1237,Execution worker,5,main]) started.
+Resolve mutations for :copyDeploymentArtifacts (Thread[#1512,Execution worker,5,main]) started.
+:copyDeploymentArtifacts (Thread[#1512,Execution worker,5,main]) started.
 
 > Task :copyDeploymentArtifacts
 Caching disabled for task ':copyDeploymentArtifacts' because:
   Build cache is disabled
 Task ':copyDeploymentArtifacts' is not up-to-date because:
   Task is untracked because: Always copy deployment artifacts
-Not watching anything anymore
-Resolve mutations for :copyLibs (Thread[#1237,Execution worker,5,main]) started.
-:copyLibs (Thread[#1242,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :copyLibs (Thread[#1512,Execution worker,5,main]) started.
+:copyLibs (Thread[#1512,Execution worker,5,main]) started.
 
 > Task :copyLibs NO-SOURCE
 Skipping task ':copyLibs' as it has no source files and no previous output files.
-Resolve mutations for :copyResources (Thread[#1242,Execution worker Thread 6,5,main]) started.
-:copyResources (Thread[#1242,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :copyResources (Thread[#1512,Execution worker,5,main]) started.
+:copyResources (Thread[#1512,Execution worker,5,main]) started.
 
 > Task :copyResources NO-SOURCE
 Skipping task ':copyResources' as it has no source files and no previous output files.
-Resolve mutations for :unzipDataSnapshot (Thread[#1242,Execution worker Thread 6,5,main]) started.
-:unzipDataSnapshot (Thread[#1242,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :unzipDataSnapshot (Thread[#1512,Execution worker,5,main]) started.
+:unzipDataSnapshot (Thread[#1512,Execution worker,5,main]) started.
 
 > Task :unzipDataSnapshot SKIPPED
 Skipping task ':unzipDataSnapshot' as task onlyIf 'Task is enabled' is false.
-Resolve mutations for :deploy (Thread[#1242,Execution worker Thread 6,5,main]) started.
-:deploy (Thread[#1242,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :deploy (Thread[#1512,Execution worker,5,main]) started.
+:deploy (Thread[#1512,Execution worker,5,main]) started.
 
 > Task :deploy
 Skipping task ':deploy' as it has no actions.
 
-BUILD SUCCESSFUL in 937ms
+BUILD SUCCESSFUL in 2s
 2 actionable tasks: 1 executed, 1 up-to-date
-Watched directory hierarchies: []
-VCS Checkout Cache (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\vcs-1) removing files not accessed on or after Fri Dec 06 15:13:46 IST 2024.
-VCS Checkout Cache (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\vcs-1) cleanup deleted 0 files/directories.
-VCS Checkout Cache (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\vcs-1) cleaned up in 0.004 secs.
-dependencies-accessors (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\8.5\dependencies-accessors) removing files not accessed on or after Fri Dec 06 15:13:46 IST 2024.
-dependencies-accessors (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\8.5\dependencies-accessors) cleanup deleted 0 files/directories.
-dependencies-accessors (C:\Users\Admin\Mendix\bse-main\deployment\.gradle\8.5\dependencies-accessors) cleaned up in 0.001 secs.
+Watched directory hierarchies: [C:\Users\Admin\Mendix\demo-main_2\deployment]
 
 
 

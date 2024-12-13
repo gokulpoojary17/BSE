@@ -2,9 +2,9 @@ Initialized native services in: C:\Users\Admin\.gradle\native
 Initialized jansi services in: C:\Users\Admin\.gradle\native
 Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot, JAVA_VERSION=21.0.2, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.2+13-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.2+13-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
 The client will now receive all logging from the daemon (pid: 13332). The daemon log file: C:\Users\Admin\.gradle\daemon\8.5\daemon-13332.out.log
-Starting 50th build in daemon [uptime: 4 hrs 17 mins 51.973 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 16% of 384 MiB]
+Starting 61st build in daemon [uptime: 6 hrs 25 mins 4.259 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 17% of 384 MiB]
 Using 8 worker leases.
-Now considering [C:\Users\Admin\Mendix\bse-main\deployment] as hierarchies to watch
+Now considering [C:\Users\Admin\Mendix\bse-main\deployment, C:\Users\Admin\Mendix\demo-main_2\deployment] as hierarchies to watch
 Watching the file system is configured to be enabled if available
 File system watching is active
 Starting Build
@@ -24,18 +24,18 @@ Selected primary task 'compile' from project :
 Selected primary task 'package' from project :
 Tasks to be executed: [task ':clean-custom-classes', task ':compile', task ':package']
 Tasks that were excluded: []
-Resolve mutations for :clean-custom-classes (Thread[#1258,Execution worker,5,main]) started.
-:clean-custom-classes (Thread[#1258,Execution worker,5,main]) started.
-destroyer locations for task group 0 (Thread[#1257,included builds,5,main]) started.
-destroyer locations for task group 1 (Thread[#1257,included builds,5,main]) started.
+Resolve mutations for :clean-custom-classes (Thread[#1533,Execution worker,5,main]) started.
+:clean-custom-classes (Thread[#1533,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#1532,included builds,5,main]) started.
+destroyer locations for task group 1 (Thread[#1532,included builds,5,main]) started.
 
 > Task :clean-custom-classes
 Caching disabled for task ':clean-custom-classes' because:
   Build cache is disabled
 Task ':clean-custom-classes' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :compile (Thread[#1258,Execution worker,5,main]) started.
-:compile (Thread[#1258,Execution worker,5,main]) started.
+Resolve mutations for :compile (Thread[#1533,Execution worker,5,main]) started.
+:compile (Thread[#1533,Execution worker,5,main]) started.
 
 > Task :compile
 Caching disabled for task ':compile' because:
@@ -49,25 +49,23 @@ Task ':compile' is not up-to-date because:
   Output property 'destinationDirectory' file C:\Users\Admin\Mendix\bse-main\deployment\run\bin\system has been removed.
   Output property 'destinationDirectory' file C:\Users\Admin\Mendix\bse-main\deployment\run\bin\webactions has been removed.
 The input changes require a full rebuild for incremental task ':compile'.
-Not watching anything anymore
 file or directory 'C:\Users\Admin\Mendix\bse-main\vendorlib', not found
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot'.
 Compiling with JDK Java compiler API.
-Class dependency analysis for incremental compilation took 0.038 secs.
+Class dependency analysis for incremental compilation took 0.051 secs.
 Created classpath snapshot for incremental compilation in 0.0 secs.
-Resolve mutations for :package (Thread[#1258,Execution worker,5,main]) started.
-:package (Thread[#1258,Execution worker,5,main]) started.
+Resolve mutations for :package (Thread[#1533,Execution worker,5,main]) started.
+:package (Thread[#1533,Execution worker,5,main]) started.
 
-> Task :package
+> Task :package UP-TO-DATE
 Caching disabled for task ':package' because:
   Build cache is disabled
-Task ':package' is not up-to-date because:
-  Input property 'rootSpec$1$1' file C:\Users\Admin\Mendix\bse-main\deployment\run\bin\myfirstmodule\proxies\adressdetails.class has changed.
+Skipping task ':package' as it is up-to-date.
 
 BUILD SUCCESSFUL in 1s
-3 actionable tasks: 3 executed
-Watched directory hierarchies: [C:\Users\Admin\Mendix\bse-main\deployment]
+3 actionable tasks: 2 executed, 1 up-to-date
+Watched directory hierarchies: [C:\Users\Admin\Mendix\bse-main\deployment, C:\Users\Admin\Mendix\demo-main_2\deployment]
 
 
 Note: Some input files use or override a deprecated API.
