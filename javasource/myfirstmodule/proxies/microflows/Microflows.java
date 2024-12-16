@@ -1476,21 +1476,25 @@ public final class Microflows
 		return (boolean) result;
 	}
 	public static com.mendix.core.actionmanagement.MicroflowCallBuilder toUpperCase_MicroflowBuilder(
-		myfirstmodule.proxies.holderdetails _holderdetails
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails
 	)
 	{
 		com.mendix.core.actionmanagement.MicroflowCallBuilder builder = Core.microflowCall("MyFirstModule.ToUpperCase_Microflow");
 		builder = builder.withParam("holderdetails", _holderdetails);
+		builder = builder.withParam("bankdetails", _bankdetails);
 		return builder;
 	}
 
 	public static void toUpperCase_Microflow(
 		IContext context,
-		myfirstmodule.proxies.holderdetails _holderdetails
+		myfirstmodule.proxies.holderdetails _holderdetails,
+		myfirstmodule.proxies.bankdetails _bankdetails
 	)
 	{
 		toUpperCase_MicroflowBuilder(
-				_holderdetails
+				_holderdetails,
+				_bankdetails
 			)
 			.execute(context);
 	}
